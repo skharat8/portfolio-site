@@ -1,0 +1,24 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: backToBlack;
+  src: url("./fonts/back-to-black-bold.ttf");
+}
+
+@theme {
+  /* Fonts */
+  --font-header: "backToBlack";
+
+  /* Colors */
+  --color-border: hsl(240 5.9% 90%);
+
+  /* Spacing */
+
+  /* Shadow */
+}
+
+@layer base {
+  .dark {
+    --color-border: hsl(240 3.7% 15.9%);
+  }
+}

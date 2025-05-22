@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+@plugin "@midudev/tailwind-animations";
+
+@utility centered-container {
+  min-height: 100%;
+  padding-inline: 16px;
+  margin-inline: auto;
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility flex-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: "Recursive Variable", var(--system-font-sans-serif);
+    color: var(--color-primary);
+    color-scheme: light dark;
+    background-color: var(--color-background);
+
+    --system-font-sans-serif:
+      -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+      helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial,
+      sans-serif;
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+  }
+
+  h1,
+  h2 {
+    line-height: 1.1;
+  }
+
+  a {
+    font-weight: 500;
+    color: var(--color-blue-600);
+    text-decoration: inherit;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-blue-800);
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
