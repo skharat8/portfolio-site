@@ -18,7 +18,7 @@ function App() {
           className="pointer-events-none h-[40vmin] animate-[spin_20s_linear_infinite]"
           alt="logo"
         />
-        <p>
+        <p id="projects">
           Edit <code>src/routes/index.tsx</code> and save to reload.
         </p>
         <a
