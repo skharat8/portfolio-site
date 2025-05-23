@@ -30,7 +30,7 @@
 
   html {
     font-family: "Playfair Display Variable", var(--system-font-sans-serif);
-    color: var(--color-primary);
+    color: var(--color-slate-50);
     color-scheme: light dark;
     background-color: var(--color-background);
 
