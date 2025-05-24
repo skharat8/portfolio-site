@@ -1,6 +1,7 @@
 import React from "react";
 
 import pixelGlasses from "@images/pixel-glasses.svg";
+import profile from "@images/profile.jpg";
 import wavingHand from "@images/waving-hand.svg";
 import { MapPinned } from "lucide-react";
 import { type Variants, motion, useMotionValue } from "motion/react";
@@ -51,14 +52,16 @@ function Hero() {
         <span className="font-light text-slate-200">Bay Area, CA</span>
       </div>
 
-      <div
-        className="relative h-50 w-50 rounded-full border-1 border-slate-800
-          [background-image:url('/src/assets/images/profile.jpg')] bg-cover
-          bg-position-[50%]"
-      >
+      <div className="relative h-50 w-50 rounded-full border-1 border-slate-800">
+        <img
+          src={profile}
+          alt="My profile picture"
+          className="absolute h-full w-full rounded-full object-cover"
+        />
+
         <img
           src={pixelGlasses}
-          alt="Pixelated black sunglasses"
+          alt="Pixelated black sunglasses appears on my profile picture"
           className={`absolute top-12 left-12.5 w-22 scale-115 ${glassesOn ? "" : "hidden"}`}
         />
 
