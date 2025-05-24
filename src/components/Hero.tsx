@@ -1,10 +1,40 @@
-import profile from "@images/profile.jpg";
+import React from "react";
+
+import pixelGlasses from "@images/pixel-glasses.svg";
 import wavingHand from "@images/waving-hand.svg";
 import { MapPinned } from "lucide-react";
+import { type Variants, motion, useMotionValue } from "motion/react";
 
 import styles from "./Hero.module.css";
 
+const drawShape: Variants = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: {
+    pathLength: [0, 1],
+    opacity: [1, 1],
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 100,
+      restDelta: 0.01,
+    },
+  },
+};
+
 function Hero() {
+  const [glassesOn, setGlassesOn] = React.useState(false);
+  const pathLength = useMotionValue(0);
+
+  React.useEffect(() => {
+    const unsubscribe = pathLength.on("animationComplete", () => {
+      if (pathLength.get() >= 0.98) {
+        setGlassesOn((prev) => !prev);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="flex-center-col gap-4 pt-4 text-center">
       <div>
@@ -21,12 +51,45 @@ function Hero() {
         <span className="font-light text-slate-200">Bay Area, CA</span>
       </div>
 
-      <img
-        src={profile}
-        alt="My Profile Picture"
-        className="w-70 rounded-[5000px_5000px_500px_500px] border-3 border-transparent ring-1
-          ring-slate-800"
-      />
+      <div
+        className="relative h-50 w-50 rounded-full border-1 border-slate-800
+          [background-image:url('/src/assets/images/profile.jpg')] bg-cover
+          bg-position-[50%]"
+      >
+        <img
+          src={pixelGlasses}
+          alt="Pixelated black sunglasses"
+          className={`absolute top-12 left-12.5 w-22 scale-115 ${glassesOn ? "" : "hidden"}`}
+        />
+
+        <motion.svg
+          width="100"
+          height="100"
+          viewBox="0 0 100 100"
+          stroke="var(--color-primary)"
+          strokeWidth="3px"
+          strokeLinecap="round"
+          fill="transparent"
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            overflow: "visible",
+            transform: "rotate(-90deg)",
+          }}
+        >
+          <motion.circle
+            cx="50"
+            cy="50"
+            r="50"
+            variants={drawShape}
+            initial="hidden"
+            whileHover="visible"
+            whileTap="visible"
+            style={{ pathLength }}
+          />
+        </motion.svg>
+      </div>
 
       <p className="text-slate-200">
         I'm a frontend web developer with full-stack expertise. I enjoy crafting
