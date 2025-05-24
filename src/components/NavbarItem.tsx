@@ -1,26 +1,56 @@
 import { Link } from "@tanstack/react-router";
-import type { ComponentProps, ReactNode } from "react";
+import type {
+  ComponentProps,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+} from "react";
+
+import { motion } from "motion/react";
 
 import { tw } from "@/lib/utils";
 
 type NavbarItemProps = ComponentProps<typeof Link> & {
   title: string;
   icon: ReactNode;
+  hoveredItem: string | null;
+  setHoveredItem: Dispatch<SetStateAction<string | null>>;
 };
 
-function NavbarItem({ to, title, icon, ...rest }: NavbarItemProps) {
-  const linkStyles = tw`flex items-center gap-2 px-2 py-1 text-slate-950 [&.active]:rounded-full
-  [&.active]:bg-slate-900 [&.active]:text-slate-50`;
+function NavbarItem({
+  title,
+  icon,
+  hoveredItem,
+  setHoveredItem,
+  ...rest
+}: NavbarItemProps) {
+  const linkStyles = tw`relative flex items-center gap-2 px-2 py-1 text-slate-950
+  [&.active]:rounded-full [&.active]:bg-slate-900 [&.active]:text-slate-50`;
 
   return (
     <Link
       title={title}
       className={linkStyles}
+      style={{ zIndex: hoveredItem === title ? 1 : 2 }}
       activeOptions={{ includeHash: true }}
+      onMouseEnter={() => setHoveredItem(title)}
       {...rest}
     >
-      {icon}
-      <span>{title}</span>
+      {({ isActive }) => {
+        return (
+          <>
+            {hoveredItem === title && (
+              <motion.div
+                layoutId="backdrop"
+                className={`absolute inset-0 rounded-full ${isActive ? "" : "bg-slate-900/20"}`}
+              />
+            )}
+
+            {icon}
+            <span>{title}</span>
+          </>
+        );
+      }}
     </Link>
   );
 }
