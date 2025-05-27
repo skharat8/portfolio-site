@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 
 export const Route = createFileRoute("/")({
   component: App,
@@ -8,8 +9,9 @@ export const Route = createFileRoute("/")({
 
 function App() {
   return (
-    <div className="p-4">
+    <div className="m-auto max-w-[800px] p-6">
       <Hero />
+      <Projects />
     </div>
   );
 }

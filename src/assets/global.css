@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./theme.css";
 @import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/noto-sans";
 
 @plugin "@midudev/tailwind-animations";
 

@@ -37,7 +37,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="flex-center-col gap-4 pt-4 text-center">
+    <div className="flex-center-col gap-4 py-4 text-center">
       <div>
         <div className="flex-center text-xl">
           Hi <img src={wavingHand} alt="Waving Hand" className={styles.wave} />
