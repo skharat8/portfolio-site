@@ -11,6 +11,7 @@
 
   /* Colors */
   --color-border: hsl(240 5.9% 90%);
+  --color-background: hsl(0 0% 7%);
 
   /* Neutral Color: Tailwind Slate */
   --color-primary: var(--color-indigo-600);
