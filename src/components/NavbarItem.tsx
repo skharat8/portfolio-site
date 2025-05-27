@@ -34,6 +34,13 @@ function NavbarItem({
       style={{ zIndex: hoveredItem === title ? 1 : 2 }}
       activeOptions={{ includeHash: true }}
       onMouseEnter={() => setHoveredItem(title)}
+      hashScrollIntoView={false}
+      onClick={() => {
+        const element = document.querySelector(`#${title.toLowerCase()}`);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }}
       {...rest}
     >
       {({ isActive }) => {

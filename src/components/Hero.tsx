@@ -52,7 +52,7 @@ function Hero() {
         <span className="font-light text-slate-200">Bay Area, CA</span>
       </div>
 
-      <div className="relative h-50 w-50 rounded-full border-1 border-slate-800">
+      <div className="relative h-40 w-40 rounded-full border-1 border-slate-800">
         <img
           src={profile}
           alt="My profile picture"
@@ -62,7 +62,7 @@ function Hero() {
         <img
           src={pixelGlasses}
           alt="Pixelated black sunglasses appears on my profile picture"
-          className={`absolute top-12 left-12.5 w-22 scale-115 ${glassesOn ? "" : "hidden"}`}
+          className={`absolute top-7 left-8 w-22 scale-95 ${glassesOn ? "" : "hidden"}`}
         />
 
         <motion.svg

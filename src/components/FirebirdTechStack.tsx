@@ -21,7 +21,7 @@ function FirebirdTechStack() {
   return (
     <div
       className="flex flex-col gap-8 rounded-md border-2 border-slate-400 bg-gradient-to-b
-        from-slate-700 to-slate-800 p-8 pt-6"
+        from-slate-700 to-slate-800 p-4 pb-6"
     >
       <TechStack title="Frontend">
         <TechStackItem icon={<HTML5 />}>HTML5</TechStackItem>
