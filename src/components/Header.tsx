@@ -14,6 +14,27 @@ const NAVBAR_ITEMS = [
 
 export default function Header() {
   const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
+  const [activeItem, setActiveItem] = React.useState<string>("home");
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveItem(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    NAVBAR_ITEMS.forEach((item) => {
+      const element = document.getElementById(item.hash ?? "home");
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="flex-center sticky top-4 z-10">
@@ -28,6 +49,7 @@ export default function Header() {
             hash={item.hash}
             title={item.title}
             icon={item.icon}
+            activeItem={activeItem}
             hoveredItem={hoveredItem}
             setHoveredItem={setHoveredItem}
           />

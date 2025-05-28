@@ -37,7 +37,10 @@ function Hero() {
   }, []);
 
   return (
-    <section className="flex-center-col gap-4 py-4 text-center">
+    <section
+      id="home"
+      className="flex-center-col h-[90vh] justify-start gap-4 py-4 text-center"
+    >
       <div>
         <div className="flex-center text-xl">
           Hi <img src={wavingHand} alt="Waving Hand" className={styles.wave} />
@@ -52,7 +55,7 @@ function Hero() {
         <span className="font-light text-slate-200">Bay Area, CA</span>
       </div>
 
-      <div className="relative h-40 w-40 rounded-full border-1 border-slate-800">
+      <div className="relative mb-6 h-40 w-40 rounded-full border-1 border-slate-800">
         <img
           src={profile}
           alt="My profile picture"

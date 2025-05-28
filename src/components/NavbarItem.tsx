@@ -8,11 +8,10 @@ import type {
 
 import { motion } from "motion/react";
 
-import { tw } from "@/lib/utils";
-
 type NavbarItemProps = ComponentProps<typeof Link> & {
   title: string;
   icon: ReactNode;
+  activeItem: string;
   hoveredItem: string | null;
   setHoveredItem: Dispatch<SetStateAction<string | null>>;
 };
@@ -20,12 +19,14 @@ type NavbarItemProps = ComponentProps<typeof Link> & {
 function NavbarItem({
   title,
   icon,
+  activeItem,
   hoveredItem,
   setHoveredItem,
   ...rest
 }: NavbarItemProps) {
-  const linkStyles = tw`relative flex items-center gap-1 px-2 py-1 text-slate-950 sm:gap-2
-  [&.active]:rounded-full [&.active]:bg-slate-900 [&.active]:text-slate-50`;
+  const isActive = activeItem === title.toLowerCase();
+  const linkStyles = `relative flex items-center gap-1 px-2 py-1 sm:gap-2
+    ${isActive ? "rounded-full bg-slate-900 text-slate-50" : "text-slate-950"}`;
 
   return (
     <Link
@@ -37,21 +38,15 @@ function NavbarItem({
       onFocus={() => setHoveredItem(title)}
       {...rest}
     >
-      {({ isActive }) => {
-        return (
-          <>
-            {hoveredItem === title && (
-              <motion.div
-                layoutId="backdrop"
-                className={`absolute inset-0 rounded-full ${isActive ? "" : "bg-slate-900/20"}`}
-              />
-            )}
+      {hoveredItem === title && (
+        <motion.div
+          layoutId="backdrop"
+          className={`absolute inset-0 rounded-full ${isActive ? "" : "bg-slate-900/20"}`}
+        />
+      )}
 
-            {icon}
-            <span>{title}</span>
-          </>
-        );
-      }}
+      {icon}
+      <span>{title}</span>
     </Link>
   );
 }
