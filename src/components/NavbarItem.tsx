@@ -5,6 +5,7 @@ import type {
   ReactNode,
   SetStateAction,
 } from "react";
+import { isMobile } from "react-device-detect";
 
 import { motion } from "motion/react";
 
@@ -34,7 +35,9 @@ function NavbarItem({
       className={linkStyles}
       style={{ zIndex: hoveredItem === title ? 1 : 2 }}
       activeOptions={{ includeHash: true }}
-      onMouseEnter={() => setHoveredItem(title)}
+      // For some unknown reason, isMobile check is required. Otherwise
+      // mouse enter event is being triggered even with touch inputs.
+      onMouseEnter={() => !isMobile && setHoveredItem(title)}
       {...rest}
     >
       {hoveredItem === title && (
