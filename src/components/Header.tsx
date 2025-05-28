@@ -40,7 +40,7 @@ export default function Header() {
     <header className="flex-center sticky top-4 z-10">
       <nav
         className="flex rounded-full bg-slate-50 px-3 py-2 sm:gap-4"
-        onMouseLeave={() => setTimeout(() => setHoveredItem(null), 200)}
+        onMouseLeave={() => setHoveredItem(null)}
       >
         {NAVBAR_ITEMS.map((item) => (
           <NavbarItem

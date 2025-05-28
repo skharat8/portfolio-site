@@ -32,10 +32,9 @@ function NavbarItem({
     <Link
       title={title}
       className={linkStyles}
-      style={{ zIndex: hoveredItem === title ? 1 : 2, outline: "none" }}
+      style={{ zIndex: hoveredItem === title ? 1 : 2 }}
       activeOptions={{ includeHash: true }}
       onMouseEnter={() => setHoveredItem(title)}
-      onFocus={() => setHoveredItem(title)}
       {...rest}
     >
       {hoveredItem === title && (
