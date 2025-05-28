@@ -24,7 +24,7 @@ function NavbarItem({
   setHoveredItem,
   ...rest
 }: NavbarItemProps) {
-  const linkStyles = tw`relative flex items-center gap-2 px-2 py-1 text-slate-950
+  const linkStyles = tw`relative flex items-center gap-1 px-2 py-1 text-slate-950 sm:gap-2
   [&.active]:rounded-full [&.active]:bg-slate-900 [&.active]:text-slate-50`;
 
   return (

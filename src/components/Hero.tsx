@@ -62,7 +62,7 @@ function Hero() {
         <img
           src={pixelGlasses}
           alt="Pixelated black sunglasses appears on my profile picture"
-          className={`absolute top-7 left-8 w-22 scale-95 ${glassesOn ? "" : "hidden"}`}
+          className={`absolute top-[1.75rem] left-6 w-[5.5rem] scale-95 ${glassesOn ? "" : "hidden"}`}
         />
 
         <motion.svg
