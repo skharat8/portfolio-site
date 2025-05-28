@@ -33,7 +33,15 @@ function ProfilePhoto() {
   }, []);
 
   return (
-    <div className="relative h-40 w-40 rounded-full border-1 border-slate-800">
+    <motion.div
+      whileHover={{
+        boxShadow: "2px 5px 5px hsl(200,100%,70%)",
+      }}
+      whileTap={{
+        boxShadow: "2px 5px 5px hsl(200,100%,70%)",
+      }}
+      className="relative h-40 w-40 rounded-full border-1 border-slate-800"
+    >
       <img
         src={profile}
         alt="My profile picture"
@@ -74,7 +82,7 @@ function ProfilePhoto() {
           style={{ pathLength, outline: "none" }}
         />
       </motion.svg>
-    </div>
+    </motion.div>
   );
 }
 
