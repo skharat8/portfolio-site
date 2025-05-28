@@ -35,13 +35,6 @@ function NavbarItem({
       activeOptions={{ includeHash: true }}
       onMouseEnter={() => setHoveredItem(title)}
       onFocus={() => setHoveredItem(title)}
-      hashScrollIntoView={false}
-      onClick={() => {
-        const element = document.querySelector(`#${title.toLowerCase()}`);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }}
       {...rest}
     >
       {({ isActive }) => {
