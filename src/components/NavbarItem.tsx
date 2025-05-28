@@ -31,9 +31,10 @@ function NavbarItem({
     <Link
       title={title}
       className={linkStyles}
-      style={{ zIndex: hoveredItem === title ? 1 : 2 }}
+      style={{ zIndex: hoveredItem === title ? 1 : 2, outline: "none" }}
       activeOptions={{ includeHash: true }}
       onMouseEnter={() => setHoveredItem(title)}
+      onFocus={() => setHoveredItem(title)}
       hashScrollIntoView={false}
       onClick={() => {
         const element = document.querySelector(`#${title.toLowerCase()}`);

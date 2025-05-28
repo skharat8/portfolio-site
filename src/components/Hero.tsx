@@ -37,7 +37,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="flex-center-col gap-4 py-4 text-center">
+    <section className="flex-center-col gap-4 py-4 text-center">
       <div>
         <div className="flex-center text-xl">
           Hi <img src={wavingHand} alt="Waving Hand" className={styles.wave} />
@@ -88,8 +88,9 @@ function Hero() {
             variants={drawShape}
             initial="hidden"
             whileHover="visible"
+            whileFocus="visible"
             whileTap="visible"
-            style={{ pathLength }}
+            style={{ pathLength, outline: "none" }}
           />
         </motion.svg>
       </div>
@@ -98,7 +99,7 @@ function Hero() {
         I'm a frontend web developer with full-stack expertise. I enjoy crafting
         engaging experiences with great attention to detail.
       </p>
-    </div>
+    </section>
   );
 }
 

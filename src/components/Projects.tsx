@@ -2,9 +2,9 @@ import FirebirdTechStack from "./FirebirdTechStack";
 
 function Projects() {
   return (
-    <div id="projects" className="scroll-mt-12 py-8">
+    <section id="projects" className="scroll-mt-12 py-8">
       <FirebirdTechStack />
-    </div>
+    </section>
   );
 }
 

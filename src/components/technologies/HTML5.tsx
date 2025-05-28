@@ -4,7 +4,7 @@ function HTML5() {
       role="img"
       viewBox="0 0 24 24"
       fill="hsl(13,77%,52%)"
-      className="group-hover:fill-neutral-300"
+      className="group-hover:fill-neutral-300 group-focus:fill-neutral-300"
     >
       <title>HTML5</title>
       <path
