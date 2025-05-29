@@ -2,6 +2,7 @@ import wavingHand from "@images/waving-hand.svg";
 import { MapPinned } from "lucide-react";
 
 import styles from "./Hero.module.css";
+import LiquidUnderline from "./LiquidUnderline";
 import ProfilePhoto from "./ProfilePhoto";
 
 function Hero() {
@@ -32,10 +33,8 @@ function Hero() {
       <p className="mt-6 text-lg text-slate-200 md:mt-8 md:text-xl">
         Passionate about software development, I'm a React developer with
         full-stack expertise. I enjoy crafting engaging experiences with{" "}
-        <span className="border-b-2 border-yellow-600">
-          attention to detail
-        </span>{" "}
-        and building innovative modern web apps.
+        <LiquidUnderline>attention to detail</LiquidUnderline> and building
+        innovative modern web apps.
       </p>
     </section>
   );
