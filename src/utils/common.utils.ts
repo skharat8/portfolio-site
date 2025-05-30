@@ -11,3 +11,7 @@ export function range(start: number, end?: number, step = 1) {
 
   return res;
 }
+
+export function random(start: number, end: number) {
+  return Math.floor(Math.random() * (end - start)) + start;
+}

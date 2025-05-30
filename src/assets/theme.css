@@ -47,6 +47,26 @@
   --spacing-16: 48rem;
 
   /* Shadow */
+
+  /* Animations */
+  --animate-breathe: breathe 2s ease-in-out infinite;
+  --animate-travel: travel-across-screen linear 70s infinite alternate both;
+
+  @keyframes breathe {
+    from {
+      opacity: 0.5;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes travel-across-screen {
+    to {
+      transform: translate(var(--destination-x), var(--destination-y));
+    }
+  }
 }
 
 @layer base {
