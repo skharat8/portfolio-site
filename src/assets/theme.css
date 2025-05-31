@@ -47,6 +47,27 @@
   --spacing-16: 48rem;
 
   /* Shadow */
+  --shadow-slate-color: 220deg 89% 1%;
+
+  /* 0.75 oomph, 0.5 crispy, 0.75 resolution */
+  --shadow-elevation-low:
+    0.4px 0.5px 0.7px hsl(var(--shadow-slate-color) / 0.43),
+    0.7px 1px 1.4px -1.2px hsl(var(--shadow-slate-color) / 0.43),
+    1.8px 2.5px 3.5px -2.5px hsl(var(--shadow-slate-color) / 0.43);
+  --shadow-elevation-medium:
+    0.4px 0.5px 0.7px hsl(var(--shadow-slate-color) / 0.45),
+    1.4px 2px 2.7px -0.8px hsl(var(--shadow-slate-color) / 0.45),
+    3.7px 5px 7px -1.7px hsl(var(--shadow-slate-color) / 0.45),
+    9px 12.3px 17.1px -2.5px hsl(var(--shadow-slate-color) / 0.45);
+  --shadow-elevation-high:
+    0.4px 0.5px 0.7px hsl(var(--shadow-slate-color) / 0.42),
+    2.8px 3.9px 5.4px -0.4px hsl(var(--shadow-slate-color) / 0.42),
+    5.4px 7.3px 10.2px -0.7px hsl(var(--shadow-slate-color) / 0.42),
+    8.9px 12.1px 16.9px -1.1px hsl(var(--shadow-slate-color) / 0.42),
+    14.3px 19.5px 27.2px -1.4px hsl(var(--shadow-slate-color) / 0.42),
+    22.3px 30.5px 42.5px -1.8px hsl(var(--shadow-slate-color) / 0.42),
+    34px 46.4px 64.7px -2.1px hsl(var(--shadow-slate-color) / 0.42),
+    50.2px 68.4px 95.5px -2.5px hsl(var(--shadow-slate-color) / 0.42);
 
   /* Animations */
   --animate-breathe: breathe 2s ease-in-out infinite;

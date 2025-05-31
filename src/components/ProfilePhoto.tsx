@@ -11,7 +11,7 @@ const drawShape: Variants = {
     opacity: [1, 1],
     transition: {
       type: "spring",
-      stiffness: 300,
+      stiffness: 200,
       damping: 100,
       restDelta: 0.01,
     },
@@ -33,19 +33,11 @@ function ProfilePhoto() {
   }, []);
 
   return (
-    <motion.div
-      whileHover={{
-        boxShadow: "2px 5px 5px hsl(200,100%,70%)",
-      }}
-      whileTap={{
-        boxShadow: "2px 5px 5px hsl(200,100%,70%)",
-      }}
-      className="relative h-40 w-40 rounded-full border-1 border-slate-800"
-    >
+    <motion.div className="relative h-40 w-40 rounded-full border-1 border-slate-800">
       <img
         src={profile}
         alt="My profile picture"
-        className="absolute h-full w-full rounded-full object-cover"
+        className="shadow-elevation-medium absolute h-full w-full rounded-full object-cover"
       />
 
       <img
@@ -59,7 +51,7 @@ function ProfilePhoto() {
         height="100"
         viewBox="0 0 100 100"
         stroke="var(--color-primary)"
-        strokeWidth="3px"
+        strokeWidth="5px"
         strokeLinecap="round"
         fill="transparent"
         style={{
