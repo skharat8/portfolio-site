@@ -39,7 +39,10 @@ function Hero() {
             <ProfilePhoto />
           </div>
 
-          <p className="mt-6 text-lg text-slate-200 md:mt-8 md:text-xl">
+          <p
+            className="mt-6 text-lg text-slate-200 text-shadow-lg text-shadow-slate-950 md:mt-8
+              md:text-xl"
+          >
             Passionate about software development, I'm a React developer with
             full-stack expertise. I enjoy crafting engaging experiences with{" "}
             <LiquidUnderline>attention to detail</LiquidUnderline> and building
