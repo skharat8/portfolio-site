@@ -6,7 +6,7 @@ function LiquidUnderline({ children }: PropsWithChildren) {
   return (
     <span
       tabIndex={0}
-      className="group relative text-nowrap delay-100 outline-none hover:text-slate-950
+      className="group relative isolate text-nowrap delay-100 outline-none hover:text-slate-950
         focus:text-slate-950"
     >
       {children}
