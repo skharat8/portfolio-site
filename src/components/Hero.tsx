@@ -1,7 +1,4 @@
-import wavingHand from "@images/waving-hand.svg";
-import { MapPinned } from "lucide-react";
-
-import styles from "./Hero.module.css";
+import HeroTitle from "./HeroTitle";
 import LiquidUnderline from "./LiquidUnderline";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import ProfilePhoto from "./ProfilePhoto";
@@ -17,25 +14,7 @@ function Hero() {
       >
         <MaxWidthWrapper maxWidth="800px">
           <div className="flex-center-col mt-8 w-full gap-6 sm:mt-10 sm:flex-row-reverse sm:justify-around">
-            <div className="flex-center-col">
-              <div className="flex-center text-xl md:text-3xl">
-                Hi{" "}
-                <img
-                  src={wavingHand}
-                  alt="Waving Hand"
-                  className={styles.wave}
-                />
-                <span className="ml-1">I'm</span>
-              </div>
-              <h1 className="text-5xl font-bold md:text-6xl">Smitesh Kharat</h1>
-              <h2 className="text-xl md:text-3xl">Frontend React Developer</h2>
-
-              <div className="mt-3 flex gap-2">
-                <MapPinned />
-                <span className="font-light text-slate-200">Bay Area, CA</span>
-              </div>
-            </div>
-
+            <HeroTitle />
             <ProfilePhoto />
           </div>
 

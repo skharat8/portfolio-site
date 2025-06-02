@@ -2,7 +2,6 @@
   .wave {
     display: inline-block;
     width: 2rem;
-    font-size: 1.3rem;
     transform-origin: 70% 70%;
     animation: wave 2.5s infinite ease-in-out;
   }
