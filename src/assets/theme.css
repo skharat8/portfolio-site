@@ -74,12 +74,8 @@
   --animate-travel: travel-across-screen linear 70s infinite alternate both;
 
   @keyframes breathe {
-    from {
+    50% {
       opacity: 0.5;
-    }
-
-    to {
-      opacity: 1;
     }
   }
 

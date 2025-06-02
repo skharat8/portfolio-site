@@ -10,7 +10,7 @@ function LiquidUnderline({ children }: PropsWithChildren) {
         hover:text-shadow-none focus:text-slate-950 focus:text-shadow-none"
     >
       {children}
-      <div
+      <span
         className="absolute top-0 -left-0.5 -z-1 h-[110%] w-[102%] overflow-hidden rounded-md
           border-b-3 border-[rgba(255,179,11)]"
       >
@@ -18,7 +18,7 @@ function LiquidUnderline({ children }: PropsWithChildren) {
           width="350"
           className="group-hover:-translate-y-[5.3rem] group-focus:-translate-y-[5.3rem]"
         />
-      </div>
+      </span>
     </span>
   );
 }

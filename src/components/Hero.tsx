@@ -12,11 +12,11 @@ function Hero() {
     <StarryBackground>
       <section
         id="home"
-        className="flex-center-col mt-6 h-[90svh] justify-start gap-4 bg-gradient-to-b
-          from-slate-950 to-slate-800 py-4 text-center md:mt-8"
+        className="flex-center-col h-svh justify-start gap-4 bg-gradient-to-b from-black
+          via-slate-900 via-70% to-slate-800 py-4 text-center"
       >
         <MaxWidthWrapper maxWidth="800px">
-          <div className="flex-center-col w-full gap-6 sm:flex-row-reverse sm:justify-around">
+          <div className="flex-center-col mt-8 w-full gap-6 sm:mt-10 sm:flex-row-reverse sm:justify-around">
             <div className="flex-center-col">
               <div className="flex-center text-xl md:text-3xl">
                 Hi{" "}
@@ -43,10 +43,10 @@ function Hero() {
             className="mt-6 text-lg text-slate-200 text-shadow-lg text-shadow-slate-950 md:mt-8
               md:text-xl"
           >
-            Passionate about software development, I'm a React developer with
-            full-stack expertise. I enjoy crafting engaging experiences with{" "}
+            I'm a React developer with full-stack expertise. I enjoy crafting
+            engaging experiences with{" "}
             <LiquidUnderline>attention to detail</LiquidUnderline> and building
-            innovative modern web apps.
+            user friendly modern web apps.
           </p>
         </MaxWidthWrapper>
       </section>

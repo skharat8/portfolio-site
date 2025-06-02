@@ -9,9 +9,9 @@ export const Route = createFileRoute("/")({
 
 function App() {
   return (
-    <>
+    <main>
       <Hero />
       <Projects />
-    </>
+    </main>
   );
 }

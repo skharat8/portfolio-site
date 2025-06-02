@@ -13,8 +13,8 @@ function Wave({ width, className }: WaveProps) {
     >
       <defs>
         <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-          <stop stop-color="rgba(255, 179, 11)" offset="0%"></stop>
-          <stop stop-color="rgba(243, 106, 62)" offset="100%"></stop>
+          <stop stopColor="rgba(255, 179, 11)" offset="0%"></stop>
+          <stop stopColor="rgba(243, 106, 62)" offset="100%"></stop>
         </linearGradient>
       </defs>
       <path
