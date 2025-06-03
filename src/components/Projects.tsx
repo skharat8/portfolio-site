@@ -10,13 +10,16 @@ function Projects() {
       <MaxWidthWrapper maxWidth="1400px">
         <FirebirdTitle />
 
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-8">
-          <div className="w-full flex-1 overflow-hidden rounded-lg object-cover">
-            <img
-              src={firebirdHome}
-              className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-[1.02]"
-              alt="Home Page of the Firebird App"
-            />
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
+          <div className="flex-1">
+            <p className="mb-2 ml-1 text-lg">A Modern Social Media Platform</p>
+            <div className="w-full overflow-hidden rounded-lg">
+              <img
+                src={firebirdHome}
+                className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-[1.02]"
+                alt="Home Page of the Firebird App"
+              />
+            </div>
           </div>
 
           <FirebirdTechStack className="flex-1" />
