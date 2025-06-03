@@ -11,7 +11,6 @@ import ReactQuery from "./ReactQuery";
 import ReactRouter from "./ReactRouter";
 import Tailwind from "./Tailwind";
 import TypeScript from "./TypeScript";
-import Vite from "./Vite";
 import Zod from "./Zod";
 
 export {
@@ -23,7 +22,6 @@ export {
   ReactRouter,
   ReactQuery,
   ReactHookForm,
-  Vite,
   Zod,
   NodeJS,
   Express,

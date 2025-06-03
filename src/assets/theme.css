@@ -16,6 +16,20 @@
   /* Neutral Color: Tailwind Slate */
   --color-primary: var(--color-indigo-600);
 
+  --color-secondary-50: hsl(38 65% 95%);
+  --color-secondary-100: hsl(38 85% 92%);
+  --color-secondary-200: hsl(39 83% 84%);
+  --color-secondary-300: hsl(39 83% 77%);
+  --color-secondary-400: hsl(39 83% 69%);
+  --color-secondary-500: hsl(39 83% 61%);
+  --color-secondary-600: hsl(39 53% 49%);
+  --color-secondary-700: hsl(39 53% 37%);
+  --color-secondary-800: hsl(39 53% 24%);
+  --color-secondary-900: hsl(38 52% 12%);
+  --color-secondary-950: hsl(38 42% 7%);
+
+  --color-secondary-pastel: hsl(40 100% 75%);
+
   --color-accent-red-50: hsl(360 100% 97%);
   --color-accent-red-100: hsl(360 82% 89%);
   --color-accent-red-200: hsl(360 77% 78%);
@@ -26,7 +40,7 @@
   --color-accent-red-700: hsl(360 79% 32%);
   --color-accent-red-800: hsl(360 85% 25%);
   --color-accent-red-900: hsl(360 92% 20%);
-  --color-accent-red: var(--color-accent-red-400);
+  --color-firebird-theme: var(--color-accent-red-400);
 
   /* Spacing */
   --spacing-1: 0.25rem;

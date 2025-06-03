@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 import TechStack from "./TechStack";
 import TechStackItem from "./TechStackItem";
 import {
@@ -13,15 +15,18 @@ import {
   ReactQuery,
   ReactRouter,
   Tailwind,
-  Vite,
+  TypeScript,
   Zod,
 } from "./technologies";
 
-function FirebirdTechStack() {
+function FirebirdTechStack({ className }: { className?: string }) {
   return (
     <div
-      className="flex flex-col gap-6 rounded-xl border-2 border-slate-400 bg-gradient-to-b
-        from-slate-700 to-slate-800 px-2 pt-4 pb-5"
+      className={cn(
+        `from-secondary-600 to-secondary-800 border-secondary-300 flex flex-col gap-6
+        rounded-xl border-3 bg-gradient-to-br px-6 pt-4 pb-5 shadow-md`,
+        className,
+      )}
     >
       <TechStack title="Frontend">
         <TechStackItem icon={<HTML5 />}>HTML5</TechStackItem>
@@ -29,7 +34,7 @@ function FirebirdTechStack() {
         <TechStackItem icon={<Tailwind />}>Tailwind</TechStackItem>
         <TechStackItem icon={<Zod />}>Zod</TechStackItem>
         <TechStackItem icon={<React />}>React</TechStackItem>
-        <TechStackItem icon={<Vite />}>Vite</TechStackItem>
+        <TechStackItem icon={<TypeScript />}>TypeScript</TechStackItem>
         <TechStackItem icon={<ReactRouter />}>React Router</TechStackItem>
         <TechStackItem icon={<ReactQuery />}>React Query</TechStackItem>
         <TechStackItem icon={<ReactHookForm />}>Hook Form</TechStackItem>

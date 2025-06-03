@@ -12,15 +12,16 @@ function TechStackItem({
   return (
     <article
       tabIndex={0}
-      className="group flex-center-col h-[6.5rem] w-[6.5rem] gap-3 rounded-md border-3
-        border-neutral-950 bg-neutral-900 p-4 outline-0 hover:border-neutral-300
-        hover:bg-indigo-900 focus:border-neutral-300 focus:bg-indigo-900 sm:h-[7rem]
-        sm:w-[7.5rem] sm:gap-2"
+      className="group flex-center-col bg-secondary-900 border-secondary-950
+        hover:bg-accent-red-400 focus:bg-accent-red-400 h-[6.5rem] w-[6.5rem] gap-3
+        rounded-md border-3 p-4 outline-0 focus:border-neutral-300 sm:h-[6.7rem]
+        sm:w-[6.7rem] sm:gap-2"
     >
       {icon}
       <span
-        className="font-['Noto_Sans_Variable'] text-xs font-bold text-nowrap text-neutral-300
-          uppercase hover:text-neutral-100 focus:text-neutral-100 sm:text-sm"
+        className="-skew-x-4 font-['Noto_Sans_Variable'] text-xs font-bold text-nowrap
+          text-neutral-300 uppercase hover:text-neutral-100 focus:text-neutral-100
+          sm:text-sm"
       >
         {children}
       </span>
