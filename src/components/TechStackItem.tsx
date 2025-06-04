@@ -22,10 +22,10 @@ function TechStackItem({
         boxShadow: "var(--shadow-elevation-medium)",
       }}
       whileTap={{
-        scale: 1.04,
+        scale: 1.05,
         boxShadow: "var(--shadow-elevation-medium)",
       }}
-      transition={{ type: "spring", damping: 7, stiffness: 180 }}
+      transition={{ type: "spring", damping: 6, stiffness: 180 }}
     >
       {icon}
       <span

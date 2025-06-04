@@ -7,7 +7,7 @@ type TechStackProps = {
 function TechStack({ title, children }: PropsWithChildren<TechStackProps>) {
   return (
     <div className="flex flex-col justify-start">
-      <div className="mb-2 self-start pl-1 text-2xl font-extrabold text-slate-950">
+      <div className="mb-2 self-start pl-1 text-xl font-extrabold text-slate-950">
         {title}
       </div>
 
