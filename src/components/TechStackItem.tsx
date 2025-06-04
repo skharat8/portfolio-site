@@ -18,8 +18,8 @@ function TechStackItem({
     >
       {icon}
       <span
-        className="-skew-x-4 font-['Noto_Sans_Variable'] text-xs font-bold text-nowrap
-          text-neutral-300 uppercase hover:text-neutral-100 focus:text-neutral-100"
+        className="-skew-x-4 text-xs font-bold text-nowrap text-neutral-300 uppercase
+          hover:text-neutral-100 focus:text-neutral-100"
       >
         {children}
       </span>

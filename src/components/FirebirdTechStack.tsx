@@ -26,14 +26,15 @@ function FirebirdTechStack({ className }: { className?: string }) {
     <div
       className={cn(
         `to-secondary-600 border-secondary-300 relative flex flex-col gap-6 rounded-xl
-        border-3 bg-gradient-to-br from-slate-700 px-6 pt-7 pb-5 shadow-md`,
+        border-3 bg-gradient-to-br from-slate-700 px-6 pt-7 pb-5
+        font-[Noto_Sans_Variable] shadow-md`,
         className,
       )}
     >
       <div
         className="border-secondary-700 bg-secondary-900 text-secondary-200 absolute -top-5 right-0
           left-0 mx-auto flex w-[fit-content] items-center gap-2 rounded-lg border-4 px-5
-          py-2 font-['Noto_Sans_Variable'] text-2xl font-bold"
+          py-2 text-2xl font-bold"
       >
         <HiMiniRectangleStack />
         Tech Stack
