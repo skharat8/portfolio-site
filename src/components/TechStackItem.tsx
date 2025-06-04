@@ -29,7 +29,7 @@ function TechStackItem({
     >
       {icon}
       <span
-        className="-skew-x-4 text-xs font-bold text-nowrap text-neutral-300 uppercase
+        className="-skew-x-4 text-xs font-bold text-nowrap text-neutral-300 uppercase select-none
           group-hover:text-neutral-100 group-focus-visible:text-neutral-100"
       >
         {children}

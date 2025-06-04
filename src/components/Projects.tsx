@@ -1,5 +1,6 @@
 import firebirdHome from "@images/home-landscape.png";
 
+import FirebirdFeatures from "./FirebirdFeatures";
 import FirebirdTechStack from "./FirebirdTechStack";
 import FirebirdTitle from "./FirebirdTitle";
 import MaxWidthWrapper from "./MaxWidthWrapper";
@@ -15,20 +16,26 @@ function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
-          <div className="flex-1">
+        <div className="mb-4 flex flex-col gap-8 lg:flex-row lg:items-center">
+          <a
+            href="https://project-firebird.vercel.app/login"
+            target="_blank"
+            className="flex-1"
+          >
             <div className="w-full overflow-hidden rounded-lg">
               <img
                 src={firebirdHome}
                 className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-[1.02]
-                  focus:scale-[1.02]"
+                  focus-visible:scale-[1.02]"
                 alt="Home Page of the Firebird App"
               />
             </div>
-          </div>
+          </a>
 
           <FirebirdTechStack className="flex-1" />
         </div>
+
+        <FirebirdFeatures />
       </MaxWidthWrapper>
     </section>
   );
