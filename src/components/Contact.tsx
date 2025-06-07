@@ -6,13 +6,14 @@ import SectionTitle from "./SectionTitle";
 
 function Contact() {
   return (
-    <section id="contact" className="mb-4 scroll-mt-7 bg-slate-950">
+    <section
+      id="contact"
+      className="mb-4 scroll-mt-7 bg-slate-950 font-[Noto_Sans_Variable]"
+    >
       <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
-          className="mb-7"
-          icon={
-            <ContactPhoneIcon className="mt-1 h-[34px] w-[34px] md:h-[45px] md:w-[45px]" />
-          }
+          className="mb-6"
+          icon={<ContactPhoneIcon className="mt-1 h-[45px] w-[45px]" />}
         >
           Let's Connect
         </SectionTitle>

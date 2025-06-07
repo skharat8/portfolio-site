@@ -17,16 +17,14 @@ function AboutMe() {
   border-slate-400 bg-slate-900 px-3 py-1 text-xl font-bold text-slate-400`;
 
   return (
-    <section id="about" className="scroll-mt-7 bg-slate-900">
+    <section
+      id="about"
+      className="scroll-mt-7 bg-slate-900 font-[Noto_Sans_Variable]"
+    >
       <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
           className="mb-7"
-          icon={
-            <img
-              src={aboutMeIcon}
-              className="h-[34px] w-[34px] md:h-[45px] md:w-[45px]"
-            />
-          }
+          icon={<img src={aboutMeIcon} className="h-[45px] w-[45px]" />}
         >
           About Me
         </SectionTitle>

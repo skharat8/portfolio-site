@@ -15,9 +15,7 @@ function SectionTitle({
   children,
 }: PropsWithChildren<SectionTitleProps>) {
   return (
-    <div
-      className={cn(className, "flex items-center gap-2 text-4xl md:text-5xl")}
-    >
+    <div className={cn(className, "flex items-center gap-2 text-4xl")}>
       {/* Logo */}
       <motion.div
         initial={{ x: "calc(-100% - 32px)" }}

@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 function FirebirdTitle() {
   return (
-    <div className="flex items-center gap-2 text-4xl">
+    <div className="flex items-center gap-2 font-[Noto_Sans_Variable] text-4xl">
       {/* Logo */}
       <motion.div
         className="h-7 w-7 rounded-full"
