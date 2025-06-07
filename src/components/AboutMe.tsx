@@ -6,14 +6,15 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import SectionTitle from "./SectionTitle";
 
 function AboutMe() {
-  const textWrapperStyles = tw`group hover:border-secondary-300 relative mb-6 w-[min(44rem,95%)] rounded-md
-  border-4 border-slate-300 bg-gradient-to-br from-slate-700 to-slate-900 px-6
-  py-5 text-slate-100`;
+  const textWrapperStyles = tw`group hover:border-secondary-300 focus:border-secondary-300 relative mb-6
+  w-[min(44rem,95%)] rounded-md border-4 border-slate-300 bg-gradient-to-br
+  from-slate-700 to-slate-900 px-6 py-5 text-slate-100`;
 
-  const subHeaderStyles = tw`group-hover:bg-accent-red-800 group-hover:text-accent-red-100
-  group-hover:border-accent-red-400 absolute -translate-x-3
-  -translate-y-[calc(100%+0.25rem)] rounded-md border-2 border-slate-400
-  bg-slate-900 px-3 py-1 text-xl font-bold text-slate-400`;
+  const subHeaderStyles = tw`group-hover:bg-accent-red-800 group-focus:bg-accent-red-800
+  group-hover:text-accent-red-100 group-focus:text-accent-red-10
+  group-hover:border-accent-red-400 group-focus:border-accent-red-400 absolute
+  -translate-x-3 -translate-y-[calc(100%+0.25rem)] rounded-md border-2
+  border-slate-400 bg-slate-900 px-3 py-1 text-xl font-bold text-slate-400`;
 
   return (
     <section id="about" className="scroll-mt-7 bg-slate-900">
@@ -43,12 +44,11 @@ function AboutMe() {
               beautiful, and engaging experiences.
             </p>
             <p>
-              It's been quite a journey, as I have learnt so much that goes into
-              creating memorable experiences. Its a joy to transform ideas into
-              interactive experiences and solve technical challenges along the
-              way. As the landscape of frontend development changes
-              continuously, the road to perfecting this art doesn't stop here,
-              and I am always looking for new challenges and opportunities.
+              Its a real joy to transform ideas into interactive experiences and
+              solve technical challenges along the way. As the landscape of
+              frontend development changes continuously, the road to perfecting
+              this art doesn't stop here, and I am always looking for new
+              challenges and opportunities.
             </p>
           </div>
 
@@ -59,18 +59,20 @@ function AboutMe() {
               I pride myself in having a keen eye for details, and strive to
               write clean code that is well organized and documented. Over the
               past year, I have dedicated myself to learning the inner workings
-              of both React and various CSS layout algorithms. The behavior of
-              CSS often tends to be confusing and a source of obstacles for many
-              developers, so focusing on it has given me the ability to
-              implement challenging designs with confidence.
+              of both React and various CSS layout algorithms.
             </p>
-            <p>
+            <p className="mb-4">
+              The behavior of CSS often tends to be confusing and a source of
+              obstacles for many developers, so focusing on it has given me the
+              ability to implement challenging designs with confidence.
+            </p>
+            <p className="mb-4">
               My past as an experienced developer means I am familiar with JIRA
               task management, code reviews, and working collaboratively in an
-              agile environment. I have experience taking ownership of major
-              features that required effort across multiple teams, and...
-              Excited to see what the future holds for me in web design!
+              agile environment. I also have experience taking ownership of
+              major features that required effort across multiple teams.
             </p>
+            <p>Excited to see what the future holds for me in web design!</p>
           </div>
         </div>
       </MaxWidthWrapper>
