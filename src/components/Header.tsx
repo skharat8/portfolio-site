@@ -25,7 +25,7 @@ export default function Header() {
           }
         });
       },
-      { threshold: 0.6 },
+      { threshold: 0.2 },
     );
 
     NAVBAR_ITEMS.forEach((item) => {
