@@ -1,14 +1,14 @@
-import { BookOpenText, NotepadText } from "lucide-react";
+import aboutMeIcon from "@images/aboutMe.svg";
 
-import { cn, tw } from "@/lib/utils";
+import { tw } from "@/lib/utils";
 
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import SectionTitle from "./SectionTitle";
 
 function AboutMe() {
-  const textWrapperStyles = tw`group hover:border-secondary-300 relative mb-6 w-[min(700px,95%)] rounded-md
+  const textWrapperStyles = tw`group hover:border-secondary-300 relative mb-6 w-[min(44rem,95%)] rounded-md
   border-4 border-slate-300 bg-gradient-to-br from-slate-700 to-slate-900 px-6
-  py-5 text-justify text-pretty text-slate-100`;
+  py-5 text-slate-100`;
 
   const subHeaderStyles = tw`group-hover:bg-accent-red-800 group-hover:text-accent-red-100
   group-hover:border-accent-red-400 absolute -translate-x-3
@@ -17,21 +17,20 @@ function AboutMe() {
 
   return (
     <section id="about" className="scroll-mt-7 bg-slate-900">
-      <MaxWidthWrapper maxWidth="1400px">
+      <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
           className="mb-7"
           icon={
-            <NotepadText
-              size={34}
-              stroke="var(--color-secondary-300)"
-              fill="var(--color-accent-red-400)"
+            <img
+              src={aboutMeIcon}
+              className="h-[34px] w-[34px] md:h-[45px] md:w-[45px]"
             />
           }
         >
           About Me
         </SectionTitle>
 
-        <div className="flex-center-col gap-4 md:flex-row md:gap-8">
+        <div className="flex-center-col gap-4 font-[Noto_Sans_Variable] md:flex-row md:gap-8">
           <div className={textWrapperStyles}>
             <h3 className={subHeaderStyles}>My Story</h3>
 
@@ -62,8 +61,8 @@ function AboutMe() {
               past year, I have dedicated myself to learning the inner workings
               of both React and various CSS layout algorithms. The behavior of
               CSS often tends to be confusing and a source of obstacles for many
-              developers, so focusing on has given me the ability to implement
-              challenging designs with confidence.
+              developers, so focusing on it has given me the ability to
+              implement challenging designs with confidence.
             </p>
             <p>
               My past as an experienced developer means I am familiar with JIRA

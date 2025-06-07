@@ -13,7 +13,7 @@ function FirebirdFeatureItem({
   children,
 }: PropsWithChildren<FirebirdFeatureItemProp>) {
   return (
-    <li className="flex flex-col gap-2 rounded-md p-2">
+    <li className="flex flex-col gap-2 rounded-md p-2 font-[Noto_Sans_Variable]">
       {icon}
       <h3 className="text-accent-red-400 font-bold">{title}</h3>
       {children}
@@ -25,10 +25,10 @@ function FirebirdFeatures() {
   return (
     <ul
       className="grid grid-cols-[repeat(auto-fit,minmax(min(8rem,100%),1fr))] gap-4 p-4
-        text-slate-50 lg:text-xl"
+        text-slate-50 lg:text-lg"
     >
       <FirebirdFeatureItem title="Full Stack" icon={<Database />}>
-        REST API with NodeJS and Express for routing and a Postgres database
+        RESTful API with NodeJS and Express for routing and a Postgres database
         managed via Prisma
       </FirebirdFeatureItem>
 

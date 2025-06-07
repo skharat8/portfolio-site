@@ -8,7 +8,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 function Projects() {
   return (
     <section id="projects" className="scroll-mt-7">
-      <MaxWidthWrapper maxWidth="1400px">
+      <MaxWidthWrapper maxWidth="1200px">
         <div className="mb-6 flex flex-col lg:mb-0">
           <FirebirdTitle />
           <p className="text-secondary-100 ml-1 italic lg:text-lg">
