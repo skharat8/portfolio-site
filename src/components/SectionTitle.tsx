@@ -28,16 +28,14 @@ function SectionTitle({
       </motion.div>
 
       <motion.h2
-        className={`text-accent-red-400 text-shadow-secondary-900 relative isolate inline-block
-          font-extrabold text-shadow-lg`}
+        className="relative isolate inline-block font-extrabold text-slate-50 text-shadow-lg
+          text-shadow-slate-800"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
       >
         <span
           aria-hidden
-          className={
-            "border-secondary-500 absolute inset-0 bottom-0 left-3 -z-1 border-b-10"
-          }
+          className="border-accent-red-400 absolute inset-0 bottom-0 left-3 -z-1 border-b-10"
         ></span>
         {children}
       </motion.h2>
