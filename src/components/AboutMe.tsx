@@ -1,21 +1,11 @@
 import aboutMeIcon from "@images/aboutMe.svg";
 
-import { tw } from "@/lib/utils";
-
+import AboutSubheaderWrapper from "./AboutSubheaderWrapper";
+import AboutTextWrapper from "./AboutTextWrapper";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import SectionTitle from "./SectionTitle";
 
 function AboutMe() {
-  const textWrapperStyles = tw`group hover:border-secondary-300 focus:border-secondary-300 relative mb-6
-  w-[min(44rem,95%)] rounded-md border-4 border-slate-300 bg-gradient-to-br
-  from-slate-700 to-slate-900 px-6 py-5 text-slate-100`;
-
-  const subHeaderStyles = tw`group-hover:bg-accent-red-800 group-focus:bg-accent-red-800
-  group-hover:text-accent-red-100 group-focus:text-accent-red-10
-  group-hover:border-accent-red-400 group-focus:border-accent-red-400 absolute
-  -translate-x-3 -translate-y-[calc(100%+0.25rem)] rounded-md border-2
-  border-slate-400 bg-slate-900 px-3 py-1 text-xl font-bold text-slate-400`;
-
   return (
     <section
       id="about"
@@ -29,9 +19,9 @@ function AboutMe() {
           About Me
         </SectionTitle>
 
-        <div className="flex-center-col gap-4 font-[Noto_Sans_Variable] md:flex-row md:gap-8">
-          <div className={textWrapperStyles}>
-            <h3 className={subHeaderStyles}>My Story</h3>
+        <div className="flex-center-col gap-6 md:flex-row md:items-start md:gap-8">
+          <AboutTextWrapper>
+            <AboutSubheaderWrapper color="red">My Story</AboutSubheaderWrapper>
 
             <p className="mt-2 mb-4">
               Hi there! With about 10 years of experience in firmware
@@ -48,10 +38,12 @@ function AboutMe() {
               this art doesn't stop here, and I am always looking for new
               challenges and opportunities.
             </p>
-          </div>
+          </AboutTextWrapper>
 
-          <div className={textWrapperStyles}>
-            <h3 className={subHeaderStyles}>What makes me stand out?</h3>
+          <AboutTextWrapper>
+            <AboutSubheaderWrapper color="red">
+              What makes me stand out?
+            </AboutSubheaderWrapper>
 
             <p className="mt-2 mb-4">
               I pride myself in having a keen eye for details, and strive to
@@ -71,7 +63,7 @@ function AboutMe() {
               major features that required effort across multiple teams.
             </p>
             <p>Excited to see what the future holds for me in web design!</p>
-          </div>
+          </AboutTextWrapper>
         </div>
       </MaxWidthWrapper>
     </section>
