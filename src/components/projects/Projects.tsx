@@ -1,9 +1,9 @@
 import firebirdHome from "@images/home-landscape.png";
 
+import MaxWidthWrapper from "../MaxWidthWrapper";
 import FirebirdFeatures from "./FirebirdFeatures";
 import FirebirdTechStack from "./FirebirdTechStack";
 import FirebirdTitle from "./FirebirdTitle";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 
 function Projects() {
   return (

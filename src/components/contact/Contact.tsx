@@ -1,8 +1,8 @@
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import SectionTitle from "../SectionTitle";
 import ContactBar from "./ContactBar";
 import ContactForm from "./ContactForm";
 import ContactPhoneIcon from "./ContactPhoneIcon";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import SectionTitle from "./SectionTitle";
 
 function Contact() {
   return (

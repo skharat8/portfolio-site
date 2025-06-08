@@ -1,6 +1,6 @@
+import LiquidUnderline from "../LiquidUnderline";
+import MaxWidthWrapper from "../MaxWidthWrapper";
 import HeroTitle from "./HeroTitle";
-import LiquidUnderline from "./LiquidUnderline";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import ProfilePhoto from "./ProfilePhoto";
 import StarryBackground from "./StarryBackground";
 

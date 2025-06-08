@@ -4,8 +4,6 @@ import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
-import TechStack from "./TechStack";
-import TechStackItem from "./TechStackItem";
 import {
   CSS,
   Cloudinary,
@@ -21,7 +19,9 @@ import {
   Tailwind,
   TypeScript,
   Zod,
-} from "./technologies";
+} from "../technologies";
+import TechStack from "./TechStack";
+import TechStackItem from "./TechStackItem";
 
 function FirebirdTechStack({ className }: { className?: string }) {
   return (

@@ -1,9 +1,9 @@
 import aboutMeIcon from "@images/aboutMe.svg";
 
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import SectionTitle from "../SectionTitle";
 import AboutSubheaderWrapper from "./AboutSubheaderWrapper";
 import AboutTextWrapper from "./AboutTextWrapper";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import SectionTitle from "./SectionTitle";
 
 function AboutMe() {
   return (

@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 
-import Wave from "./Wave";
+import Wave from "./hero/Wave";
 
 function LiquidUnderline({ children }: PropsWithChildren) {
   return (

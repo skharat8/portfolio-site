@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import AboutMe from "@/components/AboutMe";
-import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
+import AboutMe from "@/components/about/AboutMe";
+import Contact from "@/components/contact/Contact";
+import Hero from "@/components/hero/Hero";
+import Projects from "@/components/projects/Projects";
 
 export const Route = createFileRoute("/")({
   component: App,
