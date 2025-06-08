@@ -164,7 +164,10 @@ function ContactForm() {
           {status === FormStatus.SENDING && (
             <>
               Send Message
-              <LoaderCircle size={16} />
+              <LoaderCircle
+                size={16}
+                className="animate-rotate-360 [animation-iteration-count:infinite]"
+              />
             </>
           )}
           {status === FormStatus.SUCCESS && <span>Successfully Sent!</span>}
