@@ -8,7 +8,10 @@ function ContactBar() {
   const itemStyles = tw`flex-center mx-2 h-full transition-transform`;
 
   return (
-    <div className="mx-auto mb-4 flex h-[3rem] w-fit gap-2 rounded-xl bg-slate-400 px-4">
+    <div
+      className="mx-auto mb-4 flex h-[3rem] w-fit gap-2 rounded-xl bg-radial-[at_50%_100%]
+        from-slate-500 to-slate-600 px-4"
+    >
       <div className={itemStyles}>
         <a
           href="https://www.linkedin.com/in/smitesh-kharat-81b25747/"

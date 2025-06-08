@@ -89,8 +89,8 @@ function ContactForm() {
     }
   }
 
-  const inputStyles = tw`outline-accent-red-600 h-6 rounded-sm bg-slate-400 px-2 text-slate-950
-  placeholder:pt-1 focus-visible:outline-3`;
+  const inputStyles = tw`outline-accent-red-300 h-6 rounded-sm bg-slate-400 px-2 text-slate-950
+  placeholder:pt-1 focus-visible:outline-2`;
   const errorStyles = tw`text-accent-red-500 text-sm`;
   const labelStyles = tw`font-bold`;
 
