@@ -1,5 +1,6 @@
 import React, { useImperativeHandle } from "react";
 import { useForm, useWatch } from "react-hook-form";
+import toast from "react-hot-toast";
 
 import { LoaderCircle, Send } from "lucide-react";
 
@@ -85,6 +86,13 @@ function ContactForm() {
       reset();
     } else {
       setStatus(FormStatus.ERROR);
+      toast.error("Sorry, something went wrong. Please try again later.", {
+        style: {
+          backgroundColor: "var(--color-accent-red-50)",
+          color: "firebrick",
+        },
+      });
+
       console.error(data);
     }
   }
