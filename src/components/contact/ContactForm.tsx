@@ -97,7 +97,7 @@ function ContactForm() {
   return (
     <div
       className="mx-auto w-[min(50rem,95%)] rounded-md border-2 border-slate-500 bg-slate-800
-        px-6 py-5 font-[Noto_Sans_Variable] text-slate-200"
+        px-6 py-5 font-[Noto_Sans_Variable] text-slate-200 sm:h-[35rem]"
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -143,7 +143,10 @@ function ContactForm() {
           <label className={labelStyles}>Message</label>
           <textarea
             {...rest}
-            className={cn(inputStyles, "max-h-[40rem] min-h-10")}
+            className={cn(
+              inputStyles,
+              "max-h-[40rem] min-h-10 sm:min-h-[15rem]",
+            )}
             placeholder="Write your message here"
             disabled={status === FormStatus.SENDING}
             ref={textAreaRef}

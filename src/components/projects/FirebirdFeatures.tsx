@@ -15,7 +15,7 @@ function FirebirdFeatureItem({
   return (
     <li className="flex flex-col gap-2 rounded-md p-2 font-[Noto_Sans_Variable]">
       {icon}
-      <h3 className="text-accent-red-400 font-bold">{title}</h3>
+      <h3 className="text-accent-red-300 font-bold">{title}</h3>
       {children}
     </li>
   );
@@ -25,7 +25,7 @@ function FirebirdFeatures() {
   return (
     <ul
       className="grid grid-cols-[repeat(auto-fit,minmax(min(8rem,100%),1fr))] gap-4 p-4
-        text-slate-50 lg:text-lg"
+        text-slate-50"
     >
       <FirebirdFeatureItem title="Full Stack" icon={<Database />}>
         RESTful API with NodeJS and Express for routing and a Postgres database
