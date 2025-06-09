@@ -1,5 +1,7 @@
-import firebirdProfile from "@images/firebird-profile.png";
-import firebirdHome from "@images/home-landscape.png";
+import firebirdProfileJpg from "@images/firebird-profile.jpg";
+import firebirdProfileWebp from "@images/firebird-profile.webp";
+import firebirdHomePng from "@images/home-landscape.png";
+import firebirdHomeWebp from "@images/home-landscape.webp";
 
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import FirebirdFeatures from "./FirebirdFeatures";
@@ -21,20 +23,26 @@ function Projects() {
           <div className="flex flex-1 flex-col gap-4">
             <a href="https://project-firebird.vercel.app/login" target="_blank">
               <div className="h-[40vh] w-full overflow-hidden rounded-lg">
-                <img
-                  src={firebirdHome}
-                  className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-[1.02]
-                    focus-visible:scale-[1.02]"
-                  alt="Home page of the Firebird app"
-                />
+                <picture>
+                  <source type="image/webp" src={firebirdHomeWebp} />
+                  <img
+                    src={firebirdHomePng}
+                    className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-[1.02]
+                      focus-visible:scale-[1.02]"
+                    alt="Home page of the Firebird app"
+                  />
+                </picture>
               </div>
             </a>
             <div className="hidden h-[30vh] w-full overflow-hidden rounded-lg lg:block">
-              <img
-                src={firebirdProfile}
-                className="origin-[0%_95%] scale-[1.17] rounded-lg"
-                alt="Snapshot of the profile page of the Firebird app"
-              />
+              <picture>
+                <source type="image/webp" src={firebirdProfileWebp} />
+                <img
+                  src={firebirdProfileJpg}
+                  className="-translate-y-2 rounded-lg"
+                  alt="Snapshot of the profile page of the Firebird app"
+                />
+              </picture>
             </div>
           </div>
 

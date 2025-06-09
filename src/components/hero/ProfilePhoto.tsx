@@ -1,7 +1,8 @@
 import React from "react";
 
 import pixelGlasses from "@images/pixel-glasses.svg";
-import profile from "@images/profile.jpg";
+import profileJpg from "@images/profile.jpg";
+import profileWebp from "@images/profile.webp";
 import { type Variants, motion, useMotionValue } from "motion/react";
 
 const drawShape: Variants = {
@@ -34,11 +35,14 @@ function ProfilePhoto() {
 
   return (
     <motion.div className="relative h-40 w-40 rounded-full border-1 border-slate-800">
-      <img
-        src={profile}
-        alt="My profile picture"
-        className="shadow-elevation-medium absolute h-full w-full rounded-full object-cover"
-      />
+      <picture>
+        <source type="image/webp" src={profileWebp} />
+        <img
+          src={profileJpg}
+          alt="My profile picture"
+          className="shadow-elevation-medium absolute h-full w-full rounded-full object-cover"
+        />
+      </picture>
 
       <img
         src={pixelGlasses}
