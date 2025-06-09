@@ -20,7 +20,11 @@ function AboutMe() {
         </SectionTitle>
 
         <div className="flex-center-col gap-6 md:flex-row md:items-start md:gap-8">
-          <AboutTextWrapper>
+          <AboutTextWrapper
+            enterDirection="right"
+            delayInSeconds={0.3}
+            invertOnDesktop
+          >
             <AboutSubheaderWrapper color="red">My Story</AboutSubheaderWrapper>
 
             <p className="mt-2 mb-4">
@@ -40,7 +44,11 @@ function AboutMe() {
             </p>
           </AboutTextWrapper>
 
-          <AboutTextWrapper>
+          <AboutTextWrapper
+            enterDirection="left"
+            delayInSeconds={0.3}
+            invertOnDesktop
+          >
             <AboutSubheaderWrapper color="red">
               What makes me stand out?
             </AboutSubheaderWrapper>

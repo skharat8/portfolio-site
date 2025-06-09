@@ -2,17 +2,41 @@ import type { PropsWithChildren } from "react";
 
 import { motion } from "motion/react";
 
-function AboutTextWrapper({ children }: PropsWithChildren) {
+import useWindowSize from "@/hooks/useWindowSize";
+
+type AboutTextWrapperProps = {
+  enterDirection: "left" | "right";
+  delayInSeconds?: number;
+  invertOnDesktop?: boolean;
+};
+
+function AboutTextWrapper({
+  enterDirection,
+  delayInSeconds,
+  invertOnDesktop,
+  children,
+}: PropsWithChildren<AboutTextWrapperProps>) {
+  const windowSize = useWindowSize();
+  const DESKTOP_VIEWPORT_WIDTH = 700;
+  const isDesktop = windowSize.width > DESKTOP_VIEWPORT_WIDTH;
+
+  let initialX;
+  if (enterDirection === "right") {
+    initialX = invertOnDesktop && isDesktop ? "-15%" : "15%";
+  } else {
+    initialX = invertOnDesktop && isDesktop ? "15%" : "-15%";
+  }
+
   return (
     <motion.div
       className="group relative mb-6 w-[min(44rem,80vw)] rounded-md border-4 border-slate-300
         bg-gradient-to-br from-slate-700 to-slate-900 px-6 py-5 text-slate-100
         outline-none"
-      initial={{ opacity: 0, x: "15%" }}
+      initial={{ opacity: 0, x: initialX }}
       whileInView={{
         opacity: 1,
         x: 0,
-        transition: { type: "spring", damping: 20 },
+        transition: { type: "spring", damping: 20, delay: delayInSeconds },
       }}
       whileHover={{
         y: "-8px",
