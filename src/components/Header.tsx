@@ -24,7 +24,10 @@ export default function Header() {
   });
 
   return (
-    <header className="flex-center fixed top-[16px] right-0 left-0 z-10 sm:top-6">
+    <header
+      className="flex-center fixed top-[16px] right-0 left-0 z-10 transition-transform
+        duration-300 sm:top-6"
+    >
       <nav
         className="flex rounded-full bg-slate-50 px-3 py-2 sm:gap-4"
         onMouseLeave={() => setHoveredItem(null)}
