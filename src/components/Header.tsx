@@ -3,6 +3,8 @@ import { FaCode, FaLaptop } from "react-icons/fa6";
 
 import { Mail, UserRound } from "lucide-react";
 
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+
 import NavbarItem from "./NavbarItem";
 
 const NAVBAR_ITEMS = [
@@ -14,30 +16,15 @@ const NAVBAR_ITEMS = [
 
 export default function Header() {
   const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
-  const [activeItem, setActiveItem] = React.useState<string>("home");
 
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveItem(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    NAVBAR_ITEMS.forEach((item) => {
-      const element = document.getElementById(item.hash ?? "home");
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const elementIdArray = NAVBAR_ITEMS.map((item) => item.hash ?? "home");
+  const activeItem = useIntersectionObserver({
+    elementIdArray,
+    defaultId: "home",
+  });
 
   return (
-    <header className="flex-center fixed top-4 right-0 left-0 z-10 sm:top-6">
+    <header className="flex-center fixed top-[16px] right-0 left-0 z-10 sm:top-6">
       <nav
         className="flex rounded-full bg-slate-50 px-3 py-2 sm:gap-4"
         onMouseLeave={() => setHoveredItem(null)}
