@@ -14,7 +14,7 @@ function AboutMe() {
       <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
           className="mb-7"
-          icon={<img src={aboutMeIcon} className="h-[45px] w-[45px]" />}
+          icon={<img src={aboutMeIcon} className="h-[2.8rem] w-[2.8rem]" />}
         >
           About Me
         </SectionTitle>

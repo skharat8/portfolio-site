@@ -13,7 +13,7 @@ function Contact() {
       <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
           className="mb-6"
-          icon={<ContactPhoneIcon className="mt-1 h-[45px] w-[45px]" />}
+          icon={<ContactPhoneIcon className="mt-1 h-[2.8rem] w-[2.8rem]" />}
         >
           Let's Connect
         </SectionTitle>

@@ -10,7 +10,7 @@ function FirebirdTitle() {
     <div className="flex items-center gap-2 font-[Noto_Sans_Variable] text-4xl">
       {/* Logo */}
       <motion.div
-        className="h-7 w-7 rounded-full"
+        className="h-[2.8rem] w-[2.8rem] rounded-full"
         initial={{ x: "calc(-100% - 32px)" }}
         whileInView={{ x: 0 }}
         transition={{ type: "spring", damping: 13 }}
