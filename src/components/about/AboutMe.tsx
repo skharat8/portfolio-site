@@ -9,7 +9,7 @@ function AboutMe() {
   return (
     <section
       id="about"
-      className="scroll-mt-7 bg-slate-900 font-[Noto_Sans_Variable]"
+      className="scroll-mt-7 overflow-x-clip bg-slate-900 font-[Noto_Sans_Variable]"
     >
       <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
