@@ -70,6 +70,9 @@
   --spacing-15: 40rem;
   --spacing-16: 48rem;
 
+  --text-header: var(--text-4xl);
+  --text-subheader: var(--text-xl);
+
   /* Shadow */
   --shadow-slate-color: 220deg 89% 1%;
 

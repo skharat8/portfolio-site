@@ -1,4 +1,4 @@
-function Express() {
+function Express({ className }: { className: string }) {
   return (
     <svg role="img" viewBox="0 0 24 24" className="fill-neutral-200">
       <title>Express</title>

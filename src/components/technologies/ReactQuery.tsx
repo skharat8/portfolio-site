@@ -1,4 +1,4 @@
-function ReactQuery() {
+function ReactQuery({ className }: { className: string }) {
   return (
     <svg role="img" viewBox="0 0 100 100" fill="none">
       <title>React Query</title>

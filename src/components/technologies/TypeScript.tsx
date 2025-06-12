@@ -1,4 +1,4 @@
-function TypeScript() {
+function TypeScript({ className }: { className: string }) {
   return (
     <svg role="img" viewBox="0 0 100 100" fill="none">
       <title>TypeScript</title>

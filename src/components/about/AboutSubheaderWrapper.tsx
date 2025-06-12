@@ -19,7 +19,7 @@ function AboutSubheaderWrapper({
   return (
     <h3
       className={`absolute -translate-x-3 -translate-y-[calc(100%+0.25rem)] rounded-md border-2
-        ${colors[color]} px-3 py-1 text-xl font-bold`}
+        ${colors[color]} text-subheader px-3 py-1 font-bold`}
     >
       {children}
     </h3>

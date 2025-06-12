@@ -36,7 +36,7 @@ function ProfilePhoto() {
   return (
     <motion.div className="relative h-40 w-40 rounded-full border-1 border-slate-800">
       <picture>
-        <source type="image/webp" src={profileWebp} />
+        <source type="image/webp" srcSet={profileWebp} />
         <img
           src={profileJpg}
           alt="My profile picture"

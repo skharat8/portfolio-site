@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 function FirebirdTitle() {
   return (
-    <div className="flex items-center gap-2 font-[Noto_Sans_Variable] text-4xl">
+    <div className="text-header flex items-center gap-2 font-[Noto_Sans_Variable]">
       {/* Logo */}
       <motion.div
         className="h-[2.8rem] w-[2.8rem] rounded-full"
@@ -27,8 +27,7 @@ function FirebirdTitle() {
         href="https://project-firebird.vercel.app/login"
         target="_blank"
         className="text-firebird-theme flex items-baseline gap-2 font-extrabold
-          transition-transform duration-400 hover:-translate-y-1 hover:duration-150
-          md:text-5xl"
+          transition-transform duration-400 hover:-translate-y-1 hover:duration-150"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
       >

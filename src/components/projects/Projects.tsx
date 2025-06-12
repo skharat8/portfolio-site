@@ -2,6 +2,7 @@ import firebirdProfileJpg from "@images/firebird-profile.jpg";
 import firebirdProfileWebp from "@images/firebird-profile.webp";
 import firebirdHomePng from "@images/home-landscape.png";
 import firebirdHomeWebp from "@images/home-landscape.webp";
+import { motion } from "motion/react";
 
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import FirebirdFeatures from "./FirebirdFeatures";
@@ -10,7 +11,7 @@ import FirebirdTitle from "./FirebirdTitle";
 
 function Projects() {
   return (
-    <section id="projects" className="scroll-mt-7">
+    <section id="projects" className="scroll-mt-7 overflow-x-clip">
       <MaxWidthWrapper maxWidth="1200px">
         <div className="mb-6 flex flex-col lg:mb-0">
           <FirebirdTitle />
@@ -19,31 +20,40 @@ function Projects() {
           </p>
         </div>
 
-        <div className="mb-4 flex flex-col gap-8 lg:mt-6 lg:flex-row">
+        <div className="mb-4 flex flex-col gap-7 lg:mt-6 lg:flex-row">
           <div className="flex flex-1 flex-col gap-4">
             <a href="https://project-firebird.vercel.app/login" target="_blank">
-              <div className="h-[40vh] w-full overflow-hidden rounded-lg">
+              <motion.div
+                className="group relative w-full overflow-hidden rounded-lg"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
                 <picture>
-                  <source type="image/webp" src={firebirdHomeWebp} />
+                  <source type="image/webp" srcSet={firebirdHomeWebp} />
                   <img
                     src={firebirdHomePng}
-                    className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-[1.02]
-                      focus-visible:scale-[1.02]"
+                    className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-100"
                     alt="Home page of the Firebird app"
                   />
                 </picture>
-              </div>
+              </motion.div>
             </a>
-            <div className="hidden h-[30vh] w-full overflow-hidden rounded-lg lg:block">
+            <motion.div
+              className="hidden h-[30vh] w-full overflow-hidden rounded-lg lg:block"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               <picture>
-                <source type="image/webp" src={firebirdProfileWebp} />
+                <source type="image/webp" srcSet={firebirdProfileWebp} />
                 <img
                   src={firebirdProfileJpg}
                   className="-translate-y-2 rounded-lg"
                   alt="Snapshot of the profile page of the Firebird app"
                 />
               </picture>
-            </div>
+            </motion.div>
           </div>
 
           <FirebirdTechStack className="flex-1" />

@@ -1,10 +1,10 @@
-function HTML5() {
+function HTML5({ className }: { className: string }) {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       fill="hsl(13,77%,52%)"
-      className="group-hover:fill-neutral-200 group-focus-visible:fill-neutral-200"
+      className={className}
     >
       <title>HTML5</title>
       <path

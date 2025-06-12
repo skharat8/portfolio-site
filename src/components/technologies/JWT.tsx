@@ -1,4 +1,4 @@
-function JWT() {
+function JWT({ className }: { className: string }) {
   return (
     <svg role="img" viewBox="0 0 24 24" className="fill-neutral-200">
       <title>JSON Web Tokens</title>
