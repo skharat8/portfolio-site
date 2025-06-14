@@ -119,10 +119,14 @@ function ContactForm() {
 
         <div className={`flex flex-wrap ${errors.name ? "gap-2" : "gap-4"}`}>
           <div className="mr-auto flex flex-1 flex-col gap-2">
-            <label className={labelStyles}>Name</label>
+            <label htmlFor="name" className={labelStyles}>
+              Name
+            </label>
             <input
               {...register("name", { required: "Full name is required" })}
+              id="name"
               type="text"
+              autoComplete="name"
               placeholder="Your name"
               disabled={status === FormStatus.SENDING}
               className={inputStyles}
@@ -132,9 +136,12 @@ function ContactForm() {
             )}
           </div>
           <div className="flex flex-1 flex-col gap-2">
-            <label className={labelStyles}>Email</label>
+            <label htmlFor="email" className={labelStyles}>
+              Email
+            </label>
             <input
               {...register("email", { required: "Please enter a valid email" })}
+              id="email"
               type="email"
               autoComplete="email"
               placeholder="Your email"
@@ -148,13 +155,16 @@ function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className={labelStyles}>Message</label>
+          <label htmlFor="message" className={labelStyles}>
+            Message
+          </label>
           <textarea
             {...rest}
             className={cn(
               inputStyles,
               "max-h-[40rem] min-h-10 sm:min-h-[15rem]",
             )}
+            id="message"
             placeholder="Write your message here"
             disabled={status === FormStatus.SENDING}
             ref={textAreaRef}

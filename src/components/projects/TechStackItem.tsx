@@ -14,8 +14,8 @@ function TechStackItem({
   return (
     <motion.article
       className="group flex-center-col bg-secondary-900 border-secondary-950
-        hover:bg-accent-red-400 hover:shadow-elevation-medium h-[6rem] min-w-[6rem]
-        gap-3 rounded-md border-3 p-3 will-change-transform sm:gap-2"
+        hover:bg-accent-red-400 h-[6rem] min-w-[6rem] gap-3 rounded-md border-3 p-3
+        will-change-transform sm:gap-2"
       whileHover={{
         scale: 1.05,
         boxShadow: "var(--shadow-elevation-medium)",
