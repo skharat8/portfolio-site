@@ -2,6 +2,7 @@ import wavingHand from "@images/waving-hand.svg";
 import { MapPinned } from "lucide-react";
 
 import styles from "./HeroTitle.module.css";
+import ParticleText from "./ParticleText";
 
 function HeroTitle() {
   return (
@@ -12,8 +13,10 @@ function HeroTitle() {
       </div>
 
       <h1 className="flex flex-col">
-        <span className="text-5xl font-bold md:text-6xl">Smitesh Kharat</span>
-        <span className="text-xl md:text-3xl">Frontend React Developer</span>
+        <ParticleText>Smitesh Kharat</ParticleText>
+        <span className="pt-8 text-xl md:pt-9 md:text-3xl">
+          Frontend React Developer
+        </span>
       </h1>
 
       <div className="mt-3 flex gap-2">
