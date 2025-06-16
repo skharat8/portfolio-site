@@ -6,12 +6,12 @@ import StarryBackground from "./StarryBackground";
 
 function Hero() {
   return (
-    // <StarryBackground>
     <section
       id="home"
       className="flex-center-col h-svh justify-start gap-4 bg-gradient-to-b from-black
         via-slate-900 via-70% to-slate-800 py-4 text-center"
     >
+      <StarryBackground />
       <MaxWidthWrapper maxWidth="1200px">
         <div
           className="flex-center-col mt-8 w-full gap-6 md:mt-10 md:flex-row-reverse md:justify-around
@@ -34,7 +34,6 @@ function Hero() {
         </MaxWidthWrapper>
       </MaxWidthWrapper>
     </section>
-    // </StarryBackground>
   );
 }
 
