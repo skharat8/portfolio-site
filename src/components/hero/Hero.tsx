@@ -1,10 +1,12 @@
 import { useNavigate } from "@tanstack/react-router";
 
+import profileJpg from "@images/profile.jpg";
+import profileWebp from "@images/profile.webp";
+
 import LiquidUnderline from "../LiquidUnderline";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import HeroButton from "./HeroButton";
 import HeroTitle from "./HeroTitle";
-import ProfilePhoto from "./ProfilePhoto";
 import StarryBackground from "./StarryBackground";
 
 function Hero() {
@@ -24,7 +26,17 @@ function Hero() {
             md:gap-8 lg:gap-11 xl:gap-12 2xl:gap-12"
         >
           <HeroTitle />
-          <ProfilePhoto />
+
+          <div className="z-2 h-40 w-40 rounded-full border-1 border-slate-800">
+            <picture>
+              <source type="image/webp" srcSet={profileWebp} />
+              <img
+                src={profileJpg}
+                alt="My profile picture"
+                className="shadow-elevation-medium h-full w-full rounded-full object-cover"
+              />
+            </picture>
+          </div>
         </div>
       </MaxWidthWrapper>
 
