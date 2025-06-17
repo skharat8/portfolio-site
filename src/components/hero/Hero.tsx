@@ -27,13 +27,16 @@ function Hero() {
         >
           <HeroTitle />
 
-          <div className="z-2 h-40 w-40 rounded-full border-1 border-slate-800">
+          <div className="z-2 h-40 w-40 rounded-full border-1 border-slate-800 hover:border-2">
             <picture>
               <source type="image/webp" srcSet={profileWebp} />
               <img
                 src={profileJpg}
                 alt="My profile picture"
-                className="shadow-elevation-medium h-full w-full rounded-full object-cover"
+                className="shadow-elevation-medium h-full w-full rounded-full object-cover
+                  transition-transform duration-300 hover:scale-90
+                  hover:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
+                  hover:duration-200"
               />
             </picture>
           </div>
