@@ -1,12 +1,12 @@
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
-import { motion } from "motion/react";
+import { type HTMLMotionProps, motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
 import PlanetIcon from "./PlanetIcon";
 
-type HeroButtonProps = ComponentProps<"button"> & {
+type HeroButtonProps = HTMLMotionProps<"button"> & {
   className?: string;
 };
 
