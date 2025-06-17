@@ -37,7 +37,7 @@ function FirebirdTechStack({ className }: { className?: string }) {
       transition={{ type: "spring", damping: 20 }}
     >
       <div
-        className="border-secondary-400 bg-secondary-900 text-secondary-200 text-subheader absolute
+        className="border-secondary-700 bg-secondary-900 text-secondary-200 text-subheader absolute
           -top-4 right-0 left-0 mx-auto flex w-[fit-content] items-center gap-2 rounded-lg
           border-1 px-4 py-1 font-bold"
       >
