@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from "react";
 import React from "react";
 
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { Effect, getContextAndParentElement } from "@/utils/canvas.utils";
 
 function ParticleText({ children }: PropsWithChildren) {
@@ -8,13 +9,20 @@ function ParticleText({ children }: PropsWithChildren) {
   const requestIdRef = React.useRef(0);
   const effect = React.useRef<Effect>(null);
 
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   function animate(ctx: CanvasRenderingContext2D) {
     if (!effect.current) return;
     const currentEffect = effect.current;
     ctx.clearRect(0, 0, currentEffect.canvasWidth, currentEffect.canvasHeight);
 
     currentEffect.render();
-    requestIdRef.current = requestAnimationFrame(() => animate(ctx));
+
+    if (prefersReducedMotion) {
+      cancelAnimationFrame(requestIdRef.current);
+    } else {
+      requestIdRef.current = requestAnimationFrame(() => animate(ctx));
+    }
   }
 
   React.useEffect(() => {
@@ -40,6 +48,7 @@ function ParticleText({ children }: PropsWithChildren) {
         canvas.height,
         parentElement,
         { x: 0, y: canvas.height },
+        prefersReducedMotion,
       );
 
       effect.current.drawText(textX, textY, children?.toString() ?? "");

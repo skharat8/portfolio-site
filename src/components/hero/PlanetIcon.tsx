@@ -3,7 +3,7 @@ function PlanetIcon({ className }: { className: string }) {
     <svg
       className={className}
       id="fi_9833060"
-      enable-background="new 0 0 66 66"
+      enableBackground="new 0 0 66 66"
       height="512"
       viewBox="0 0 66 66"
       width="512"

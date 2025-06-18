@@ -1,7 +1,10 @@
+.wave {
+  display: inline-block;
+  width: 2rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .wave {
-    display: inline-block;
-    width: 2rem;
     transform-origin: 70% 70%;
     animation: wave 2.5s infinite ease-in-out;
   }

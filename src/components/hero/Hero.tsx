@@ -34,9 +34,9 @@ function Hero() {
                 src={profileJpg}
                 alt="My profile picture"
                 className="shadow-elevation-medium h-full w-full rounded-full object-cover
-                  transition-transform duration-300 hover:scale-90
+                  transition-transform duration-300
                   hover:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
-                  hover:duration-200"
+                  hover:duration-200 motion-safe:hover:scale-90"
               />
             </picture>
           </div>

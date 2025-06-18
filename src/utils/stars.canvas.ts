@@ -21,10 +21,16 @@ class Star {
     this.effect = effect;
     this.x = x;
     this.y = y;
-    this.destinationX = random(0, effect.canvasWidth);
-    this.destinationY = random(0, effect.canvasHeight);
     this.size = size;
     this.color = color;
+
+    if (effect.prefersReducedMotion) {
+      this.destinationX = x;
+      this.destinationY = y;
+    } else {
+      this.destinationX = random(0, effect.canvasWidth);
+      this.destinationY = random(0, effect.canvasHeight);
+    }
   }
 
   draw() {
@@ -55,11 +61,13 @@ class StarryBackgroundEffect {
   smallSize: number;
   mediumSize: number;
   largeSize: number;
+  prefersReducedMotion: boolean;
 
   constructor(
     ctx: CanvasRenderingContext2D,
     canvasWidth: number,
     canvasHeight: number,
+    prefersReducedMotion: boolean,
   ) {
     this.ctx = ctx;
     this.canvasWidth = canvasWidth;
@@ -68,6 +76,7 @@ class StarryBackgroundEffect {
     this.smallSize = 0.5;
     this.mediumSize = 1;
     this.largeSize = 2;
+    this.prefersReducedMotion = prefersReducedMotion;
   }
 
   createStars(

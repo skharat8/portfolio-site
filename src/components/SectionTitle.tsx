@@ -2,6 +2,7 @@ import type { PropsWithChildren } from "react";
 
 import { motion } from "motion/react";
 
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { cn } from "@/lib/utils";
 
 type SectionTitleProps = {
@@ -14,11 +15,13 @@ function SectionTitle({
   className,
   children,
 }: PropsWithChildren<SectionTitleProps>) {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
     <div className={cn(className, "text-header flex items-center gap-2")}>
       {/* Logo */}
       <motion.div
-        initial={{ x: "calc(-100% - 32px)" }}
+        initial={{ x: prefersReducedMotion ? 0 : "calc(-100% - 32px)" }}
         whileInView={{ x: 0 }}
         transition={{ type: "spring", damping: 13 }}
       >

@@ -3,6 +3,8 @@ import type { PropsWithChildren } from "react";
 
 import { motion } from "motion/react";
 
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+
 type TechStackItemProps = {
   icon: React.ComponentType<{ className: string }>;
 };
@@ -11,17 +13,19 @@ function TechStackItem({
   icon: Icon,
   children,
 }: PropsWithChildren<TechStackItemProps>) {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
     <motion.article
       className="group flex-center-col bg-secondary-900 border-secondary-950
         hover:bg-accent-red-400 h-[6rem] min-w-[6rem] gap-3 rounded-md border-3 p-3
         will-change-transform sm:gap-2"
       whileHover={{
-        scale: 1.05,
+        scale: prefersReducedMotion ? 1 : 1.05,
         boxShadow: "var(--shadow-elevation-medium)",
       }}
       whileTap={{
-        scale: 1.1,
+        scale: prefersReducedMotion ? 1 : 1.1,
         boxShadow: "var(--shadow-elevation-medium)",
       }}
       transition={{ type: "spring", damping: 6, stiffness: 180 }}

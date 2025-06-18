@@ -2,6 +2,7 @@ import type { PropsWithChildren } from "react";
 
 import { type HTMLMotionProps, motion } from "motion/react";
 
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { cn } from "@/lib/utils";
 
 import PlanetIcon from "./PlanetIcon";
@@ -16,6 +17,7 @@ function HeroButton({
   ...rest
 }: PropsWithChildren<HeroButtonProps>) {
   const MotionIcon = motion.create(PlanetIcon);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
     <motion.button
@@ -37,7 +39,7 @@ function HeroButton({
         transition: { type: "spring", stiffness: 70, damping: 16 },
       }}
       whileHover={{
-        scale: 1.15,
+        scale: prefersReducedMotion ? 1 : 1.15,
         color: "var(--color-slate-50)",
         fontWeight: "bold",
         background: `radial-gradient(70% 90% at 50% 100%,

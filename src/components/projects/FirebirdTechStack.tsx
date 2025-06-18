@@ -2,6 +2,7 @@ import { HiMiniRectangleStack } from "react-icons/hi2";
 
 import { motion } from "motion/react";
 
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { cn } from "@/lib/utils";
 
 import {
@@ -24,6 +25,8 @@ import TechStack from "./TechStack";
 import TechStackItem from "./TechStackItem";
 
 function FirebirdTechStack({ className }: { className?: string }) {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
     <motion.div
       className={cn(
@@ -32,7 +35,7 @@ function FirebirdTechStack({ className }: { className?: string }) {
         sm:px-6`,
         className,
       )}
-      initial={{ opacity: 0, x: "15%" }}
+      initial={{ opacity: 0, x: prefersReducedMotion ? 0 : "15%" }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "spring", damping: 20 }}
     >

@@ -33,19 +33,27 @@ class Particle {
   originY: number;
   size: number;
   color: string;
+  prefersReducedMotion: boolean;
 
   constructor(effect: Effect, x: number, y: number, color: string) {
     this.ctx = effect.ctx;
     this.effect = effect;
-    this.x =
-      effect.canvasWidth < 1024
-        ? random(0, effect.canvasWidth)
-        : random(0.35 * effect.canvasWidth, 0.85 * effect.canvasWidth);
-    this.y = effect.canvasHeight;
     this.originX = x;
     this.originY = y;
     this.size = effect.step - 1;
     this.color = color;
+    this.prefersReducedMotion = effect.prefersReducedMotion;
+
+    if (this.prefersReducedMotion) {
+      this.x = x;
+      this.y = y;
+    } else {
+      this.x =
+        effect.canvasWidth < 1024
+          ? random(0, effect.canvasWidth)
+          : random(0.35 * effect.canvasWidth, 0.85 * effect.canvasWidth);
+      this.y = effect.canvasHeight;
+    }
   }
 
   draw() {
@@ -61,17 +69,20 @@ class Particle {
     let angleInRadians = 0;
     let velocityX = 0;
     let velocityY = 0;
+    let ease = 0;
 
-    if (distance < this.effect.mouse.radius) {
-      angleInRadians = Math.atan2(mouseToParticleY, mouseToParticleX);
-      velocityX += force * Math.cos(angleInRadians);
-      velocityY += force * Math.sin(angleInRadians);
+    if (!this.prefersReducedMotion) {
+      if (distance < this.effect.mouse.radius) {
+        angleInRadians = Math.atan2(mouseToParticleY, mouseToParticleX);
+        velocityX += force * Math.cos(angleInRadians);
+        velocityY += force * Math.sin(angleInRadians);
+      }
+
+      const friction = Math.random() * 0.6 + 0.15;
+      ease = Math.random() * 0.08 + 0.005;
+      velocityX *= friction;
+      velocityY *= friction;
     }
-
-    const friction = Math.random() * 0.6 + 0.15;
-    const ease = Math.random() * 0.08 + 0.005;
-    velocityX *= friction;
-    velocityY *= friction;
 
     this.x += (this.originX - this.x) * ease + velocityX;
     this.y += (this.originY - this.y) * ease + velocityY;
@@ -89,6 +100,7 @@ class Effect {
   step: number;
   particles: Particle[];
   mouse: { x: number; y: number; radius: number };
+  prefersReducedMotion: boolean;
 
   constructor(
     ctx: CanvasRenderingContext2D,
@@ -96,6 +108,7 @@ class Effect {
     canvasHeight: number,
     containerElement: DOMRect,
     mouseProperties: { x: number; y: number },
+    prefersReducedMotion: boolean,
   ) {
     this.ctx = ctx;
     this.canvasWidth = canvasWidth;
@@ -104,6 +117,7 @@ class Effect {
     this.containerHeight = containerElement.height;
     this.contentX = containerElement.x;
     this.contentY = containerElement.y;
+    this.prefersReducedMotion = prefersReducedMotion;
 
     this.step = 3;
     this.particles = [];

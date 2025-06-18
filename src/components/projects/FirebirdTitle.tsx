@@ -5,13 +5,17 @@ import icon4x from "@images/firebird-icon-512x512.png";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+
 function FirebirdTitle() {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
     <div className="text-header flex items-center gap-2 font-[Noto_Sans_Variable]">
       {/* Logo */}
       <motion.div
         className="h-[2.8rem] w-[2.8rem] rounded-full"
-        initial={{ x: "calc(-100% - 32px)" }}
+        initial={{ x: prefersReducedMotion ? 0 : "calc(-100% - 32px)" }}
         whileInView={{ x: 0 }}
         transition={{ type: "spring", damping: 13 }}
       >
