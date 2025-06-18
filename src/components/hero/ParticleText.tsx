@@ -4,12 +4,18 @@ import React from "react";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { Effect, getContextAndParentElement } from "@/utils/canvas.utils";
 
+function getIsMobileInitialState() {
+  const QUERY = "(hover: hover)";
+  return !window.matchMedia(QUERY).matches;
+}
+
 function ParticleText({ children }: PropsWithChildren) {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const requestIdRef = React.useRef(0);
   const effect = React.useRef<Effect>(null);
 
   const prefersReducedMotion = usePrefersReducedMotion();
+  const [isMobile, _] = React.useState(getIsMobileInitialState);
 
   function animate(ctx: CanvasRenderingContext2D) {
     if (!effect.current) return;
@@ -76,15 +82,21 @@ function ParticleText({ children }: PropsWithChildren) {
     redrawCanvas();
 
     window.addEventListener("resize", handleWindowResize);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseout", handleMouseOut);
+
+    if (!isMobile) {
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseout", handleMouseOut);
+    }
 
     return () => {
       cancelAnimationFrame(requestIdRef.current);
       clearTimeout(timeoutId);
       window.removeEventListener("resize", handleWindowResize);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseout", handleMouseOut);
+
+      if (!isMobile) {
+        window.removeEventListener("mousemove", handleMouseMove);
+        window.removeEventListener("mouseout", handleMouseOut);
+      }
     };
   }, []);
 
