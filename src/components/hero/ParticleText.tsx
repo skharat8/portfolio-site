@@ -45,6 +45,15 @@ function ParticleText({ children }: PropsWithChildren) {
       if (!res) return;
       const { ctx, parentElement } = res;
 
+      // This means the area to draw in is not yet visible. "top"
+      // represents distance of element from the top of the viewport,
+      // since its negative this means the user has scrolled down.
+      // Attempting to render now will fail and the text will disappear
+      // so exit and stop the re-render.
+      if (parentElement.top < 0) {
+        return;
+      }
+
       const textX = parentElement.x + parentElement.width / 2;
       const textY = parentElement.y + parentElement.height / 2;
 
