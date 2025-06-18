@@ -47,7 +47,7 @@ function Hero() {
         maxWidth="650px"
         className="mt-4 flex flex-col items-center gap-6 md:mt-8"
       >
-        <p className="text-lg text-slate-200 text-shadow-lg text-shadow-slate-950 md:text-xl">
+        <p className="z-2 text-lg text-slate-200 text-shadow-lg text-shadow-slate-950 md:text-xl">
           I'm a React developer with full-stack expertise. I enjoy crafting
           engaging experiences with{" "}
           <LiquidUnderline>attention to detail</LiquidUnderline> and building
