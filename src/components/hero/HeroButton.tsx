@@ -23,7 +23,7 @@ function HeroButton({
     <motion.button
       {...rest}
       className={cn(
-        "group flex-center relative z-1 h-7 cursor-pointer gap-2 rounded-full px-6 py-4",
+        "group flex-center relative z-2 h-7 cursor-pointer gap-2 rounded-full px-6 py-4",
         className,
       )}
       initial={{

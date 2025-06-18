@@ -15,15 +15,15 @@ function Hero() {
   return (
     <section
       id="home"
-      className="flex h-svh flex-col justify-start bg-gradient-to-b from-black via-slate-900
-        via-70% to-slate-800 py-4 text-center"
+      className="flex min-h-svh flex-col justify-start bg-gradient-to-b from-black via-slate-900
+        via-70% to-slate-800 p-4 text-center"
     >
       <StarryBackground />
 
       <MaxWidthWrapper maxWidth="1200px" className="flex flex-col items-center">
         <div
-          className="flex-center-col mt-8 w-full gap-6 md:mt-10 md:flex-row-reverse md:justify-around
-            md:gap-8 lg:gap-11 xl:gap-12 2xl:gap-12"
+          className="flex-center-col mt-8 w-full gap-6 md:gap-8 lg:mt-10 lg:flex-row-reverse
+            lg:justify-around lg:gap-11 xl:gap-12 2xl:gap-12"
         >
           <HeroTitle />
 

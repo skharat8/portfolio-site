@@ -101,7 +101,7 @@ function ParticleText({ children }: PropsWithChildren) {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="absolute top-0 left-0 -mt-3">
+    <canvas ref={canvasRef} className="absolute top-0 left-0 z-2 -mt-3">
       Your browser does not support HTML5 Canvas
     </canvas>
   );

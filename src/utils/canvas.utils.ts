@@ -148,7 +148,9 @@ class Effect {
     // this.ctx.fillStyle = "oklch(98.4% 0.003 247.858)";
 
     let fontSize;
-    if (this.canvasWidth < 768) {
+    if (this.canvasWidth < 600) {
+      fontSize = "3.2rem";
+    } else if (this.canvasWidth < 768) {
       fontSize = "3.8rem";
     } else if (this.canvasWidth < 1024) {
       fontSize = "4.8rem";
