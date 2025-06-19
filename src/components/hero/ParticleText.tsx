@@ -67,6 +67,8 @@ function ParticleText({ children }: PropsWithChildren) {
       );
 
       effect.current.drawText(textX, textY, children?.toString() ?? "");
+
+      cancelAnimationFrame(requestIdRef.current);
       requestIdRef.current = requestAnimationFrame(() => animate(ctx));
     }
 
