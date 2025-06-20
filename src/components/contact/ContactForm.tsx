@@ -105,7 +105,7 @@ function ContactForm() {
   return (
     <div
       className="mx-auto w-[min(50rem,95%)] rounded-md border-2 border-slate-500 bg-slate-800
-        px-6 py-5 font-[Noto_Sans_Variable] text-slate-200 sm:h-[35rem]"
+        px-6 py-5 font-[Noto_Sans_Variable] text-slate-200"
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
