@@ -5,7 +5,7 @@ import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { Effect, getContextAndParentElement } from "@/utils/canvas.utils";
 
 function getIsMobileInitialState() {
-  const QUERY = "(hover: hover)";
+  const QUERY = "(hover: hover) and (pointer: fine)";
   return !window.matchMedia(QUERY).matches;
 }
 
