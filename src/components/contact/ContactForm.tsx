@@ -2,7 +2,8 @@ import React, { useImperativeHandle } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import toast from "react-hot-toast";
 
-import { LoaderCircle, Send } from "lucide-react";
+import { LoaderCircle, RefreshCcw, Send } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 import { cn, tw } from "@/lib/utils";
 
@@ -174,31 +175,51 @@ function ContactForm() {
           )}
         </div>
 
-        <button
-          className="from-accent-red-500 to-accent-red-400 hover:from-accent-red-500/80
-            hover:to-accent-red-400/80 text-accent-red-50 mt-2 flex w-full items-center
-            justify-center gap-2 self-center rounded-sm bg-gradient-to-r py-2 pr-2 pl-4
-            font-bold sm:w-[14rem]"
-          type="submit"
-          disabled={status === FormStatus.SENDING}
-        >
-          {status === FormStatus.SENDING && (
-            <>
-              Send Message
-              <LoaderCircle
-                size={16}
-                className="animate-rotate-360 [animation-iteration-count:infinite]"
-              />
-            </>
-          )}
-          {status === FormStatus.SUCCESS && <span>Successfully Sent!</span>}
-          {(status === FormStatus.INITIAL || status === FormStatus.ERROR) && (
-            <>
-              Send Message
-              <Send size={16} />
-            </>
-          )}
-        </button>
+        <div className="flex-center mt-2 gap-3">
+          <AnimatePresence>
+            <motion.button
+              className="from-accent-red-500 to-accent-red-400 hover:from-accent-red-500/80
+                hover:to-accent-red-400/80 disabled:to-accent-red-400/80 text-accent-red-50
+                disabled:from-accent-red-500/80 flex w-full items-center justify-center gap-2
+                self-center rounded-sm bg-gradient-to-r py-2 pr-2 pl-4 font-bold
+                disabled:cursor-default sm:w-[14rem]"
+              type="submit"
+              layout={true}
+              disabled={
+                status === FormStatus.SENDING || status === FormStatus.SUCCESS
+              }
+            >
+              {status === FormStatus.SENDING && (
+                <>
+                  Send Message
+                  <LoaderCircle
+                    size={16}
+                    className="animate-rotate-360 [animation-iteration-count:infinite]"
+                  />
+                </>
+              )}
+              {status === FormStatus.SUCCESS && <span>Successfully Sent!</span>}
+              {(status === FormStatus.INITIAL ||
+                status === FormStatus.ERROR) && (
+                <>
+                  Send Message
+                  <Send size={16} />
+                </>
+              )}
+            </motion.button>
+            {status === FormStatus.SUCCESS && (
+              <motion.button
+                onClick={() => setStatus(FormStatus.INITIAL)}
+                className="rounded-md px-3 py-2 hover:bg-slate-700"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <RefreshCcw size={20} color="var(--color-slate-100)" />
+              </motion.button>
+            )}
+          </AnimatePresence>
+        </div>
       </form>
     </div>
   );
