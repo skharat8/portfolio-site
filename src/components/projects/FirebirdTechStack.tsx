@@ -36,6 +36,7 @@ function FirebirdTechStack({ className }: { className?: string }) {
         className,
       )}
       initial={{ opacity: 0, x: prefersReducedMotion ? 0 : "15%" }}
+      viewport={{ once: true }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "spring", damping: 20 }}
     >

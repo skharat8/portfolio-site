@@ -36,6 +36,7 @@ function AboutTextWrapper({
         bg-gradient-to-br from-slate-700 to-slate-900 px-6 py-5 text-slate-100
         outline-none"
       initial={{ opacity: 0, x: prefersReducedMotion ? 0 : initialX }}
+      viewport={{ once: true }}
       whileInView={{
         opacity: 1,
         x: 0,

@@ -26,6 +26,7 @@ function Projects() {
               <motion.div
                 className="group relative w-full overflow-hidden rounded-lg"
                 initial={{ opacity: 0 }}
+                viewport={{ once: true }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
@@ -42,6 +43,7 @@ function Projects() {
             <motion.div
               className="hidden h-[30vh] w-full overflow-hidden rounded-lg lg:block"
               initial={{ opacity: 0 }}
+              viewport={{ once: true }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >

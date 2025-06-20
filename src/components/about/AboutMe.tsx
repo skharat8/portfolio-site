@@ -60,9 +60,9 @@ function AboutMe() {
               of both React and various CSS layout algorithms.
             </p>
             <p className="mb-4">
-              The behavior of CSS often tends to be confusing and a source of
-              obstacles for many developers, so focusing on it has given me the
-              ability to implement challenging designs with confidence.
+              The behavior of CSS often tends to be a source of obstacles for
+              many developers, so focusing on it has given me the ability to
+              implement challenging designs with confidence.
             </p>
             <p className="mb-4">
               My past as an experienced developer means I am familiar with JIRA
