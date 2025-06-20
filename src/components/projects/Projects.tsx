@@ -22,24 +22,23 @@ function Projects() {
 
         <div className="mb-4 flex flex-col gap-7 lg:mt-6 lg:flex-row">
           <div className="flex flex-1 flex-col gap-4">
-            <a href="https://project-firebird.vercel.app/login" target="_blank">
-              <motion.div
-                className="group relative w-full overflow-hidden rounded-lg"
-                initial={{ opacity: 0 }}
-                viewport={{ once: true }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                <picture>
-                  <source type="image/webp" srcSet={firebirdHomeWebp} />
-                  <img
-                    src={firebirdHomePng}
-                    className="origin-[top_left] scale-[1.2] rounded-lg transition-transform hover:scale-100"
-                    alt="Home page of the Firebird app"
-                  />
-                </picture>
-              </motion.div>
-            </a>
+            <motion.div
+              className="group relative w-full overflow-hidden rounded-lg"
+              initial={{ opacity: 0 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <picture>
+                <source type="image/webp" srcSet={firebirdHomeWebp} />
+                <img
+                  src={firebirdHomePng}
+                  className="origin-[top_left] rounded-lg"
+                  alt="Home page of the Firebird app"
+                />
+              </picture>
+            </motion.div>
+
             <motion.div
               className="hidden h-[30vh] w-full overflow-hidden rounded-lg lg:block"
               initial={{ opacity: 0 }}
