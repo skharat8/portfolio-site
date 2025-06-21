@@ -62,6 +62,17 @@ function ParticleText({ children }: PropsWithChildren) {
       const distanceToContainerTop = parentElement.top;
       parentElement.y = -(distanceToTopEdge - distanceToContainerTop);
 
+      // Parent container dimensions are changing on resize.
+      // Fix bug where the t becomes an l on resize.
+      parentElement.y = effect.current
+        ? canvas.width < 650
+          ? parentElement.y - 8
+          : parentElement.y - 4
+        : parentElement.y;
+      parentElement.width = effect.current
+        ? parentElement.width + 4.22
+        : parentElement.width;
+
       const textX = parentElement.x + parentElement.width / 2;
       const textY = parentElement.y + parentElement.height / 2;
 
@@ -120,7 +131,7 @@ function ParticleText({ children }: PropsWithChildren) {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="absolute top-0 left-0 z-2 -mt-3">
+    <canvas ref={canvasRef} className="absolute top-0 left-0 z-2">
       Your browser does not support HTML5 Canvas
     </canvas>
   );
