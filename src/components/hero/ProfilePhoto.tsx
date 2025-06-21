@@ -54,7 +54,7 @@ function ProfilePhoto() {
         width="100"
         height="100"
         viewBox="0 0 100 100"
-        stroke="var(--color-primary)"
+        stroke="var(--color-indigo-400)"
         strokeWidth="5px"
         strokeLinecap="round"
         fill="transparent"

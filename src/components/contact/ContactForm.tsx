@@ -89,7 +89,7 @@ function ContactForm() {
       setStatus(FormStatus.ERROR);
       toast.error("Sorry, something went wrong. Please try again later.", {
         style: {
-          backgroundColor: "var(--color-accent-red-50)",
+          backgroundColor: "var(--color-primary-50)",
           color: "firebrick",
         },
       });
@@ -98,9 +98,9 @@ function ContactForm() {
     }
   }
 
-  const inputStyles = tw`outline-accent-red-300 h-6 rounded-sm bg-slate-400 px-2 text-slate-950
+  const inputStyles = tw`outline-primary-300 h-6 rounded-sm bg-slate-400 px-2 text-slate-950
   placeholder:pt-1 focus-visible:outline-2`;
-  const errorStyles = tw`text-accent-red-500 text-sm`;
+  const errorStyles = tw`text-primary-500 text-sm`;
   const labelStyles = tw`font-bold`;
 
   return (
@@ -178,9 +178,9 @@ function ContactForm() {
         <div className="flex-center mt-2 gap-3">
           <AnimatePresence>
             <motion.button
-              className="from-accent-red-500 to-accent-red-400 hover:from-accent-red-500/80
-                hover:to-accent-red-400/80 disabled:to-accent-red-400/80 text-accent-red-50
-                disabled:from-accent-red-500/80 flex w-full items-center justify-center gap-2
+              className="from-primary-500 to-primary-400 hover:from-primary-500/80
+                hover:to-primary-400/80 disabled:to-primary-400/80 text-primary-50
+                disabled:from-primary-500/80 flex w-full items-center justify-center gap-2
                 self-center rounded-sm bg-gradient-to-r py-2 pr-2 pl-4 font-bold
                 disabled:cursor-default sm:w-[14rem]"
               type="submit"

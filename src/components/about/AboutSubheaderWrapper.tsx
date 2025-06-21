@@ -10,10 +10,10 @@ function AboutSubheaderWrapper({
 }: PropsWithChildren<AboutSubheaderWrapperProps>) {
   const colors: { [key: string]: string } = {
     slate: "bg-slate-900 border-slate-500 text-slate-100",
-    red: "bg-accent-red-900 border-accent-red-500 text-accent-red-100",
+    red: "bg-primary-900 border-primary-500 text-primary-100",
     emerald: "bg-emerald-900 border-emerald-500 text-emerald-100",
     purple: "bg-purple-900 border-purple-500 text-purple-100",
-    blue: "bg-primary-azure-900 border-primary-azure-500 text-primary-azure-100",
+    blue: "bg-accent-azure-900 border-accent-azure-500 text-accent-azure-100",
   };
 
   return (

@@ -15,7 +15,7 @@ function FirebirdFeatureItem({
   return (
     <li className="flex flex-col gap-2 rounded-md p-2 font-[Noto_Sans_Variable]">
       {icon}
-      <h3 className="text-accent-red-300 font-bold">{title}</h3>
+      <h3 className="text-primary-300 font-bold">{title}</h3>
       {children}
     </li>
   );

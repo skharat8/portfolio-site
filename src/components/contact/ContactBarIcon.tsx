@@ -20,16 +20,16 @@ function ContactBarIcon({ icon: Icon }: ContactBarIconProps) {
       whileHover={{
         scale,
         rotate,
-        color: "var(--color-accent-red-400)",
+        color: "var(--color-primary-400)",
       }}
       whileTap={{
         scale,
         rotate,
-        color: "var(--color-accent-red-400)",
+        color: "var(--color-primary-400)",
       }}
     >
       <Icon
-        className="hover:bg-accent-red-50 focus:bg-accent-red-50 -mt-1 h-[3rem] w-full scale-110
+        className="hover:bg-primary-50 focus:bg-primary-50 -mt-1 h-[3rem] w-full scale-110
           bg-slate-300 fill-current shadow-sm"
       />
     </motion.div>

@@ -36,7 +36,7 @@ function SectionTitle({
       >
         <span
           aria-hidden
-          className="border-accent-red-400 absolute inset-0 bottom-0 left-3 -z-1 border-b-10"
+          className="border-primary-400 absolute inset-0 bottom-0 left-3 -z-1 border-b-10"
         ></span>
         {children}
       </motion.h2>

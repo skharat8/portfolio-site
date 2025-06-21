@@ -13,18 +13,19 @@
   --color-border: hsl(240 5.9% 90%);
   --color-background: var(--color-slate-950);
 
-  /* Neutral Color: Tailwind Slate */
-  --color-primary: var(--color-indigo-500);
-
-  --color-primary-azure-100: hsl(211 100% 90%);
-  --color-primary-azure-200: hsl(210 100% 80%);
-  --color-primary-azure-300: hsl(211 100% 90%);
-  --color-primary-azure-400: hsl(210 100% 60%);
-  --color-primary-azure-500: hsl(210 100% 50%);
-  --color-primary-azure-600: hsl(210 100% 40%);
-  --color-primary-azure-700: hsl(210 100% 30%);
-  --color-primary-azure-800: hsl(210 100% 20%);
-  --color-primary-azure-900: hsl(211 100% 10%);
+  /* Neutral Color: Tailwind Slate
+     Accent Color: Tailwind Indigo */
+  --color-primary-50: hsl(360 100% 97%);
+  --color-primary-100: hsl(360 82% 89%);
+  --color-primary-200: hsl(360 77% 78%);
+  --color-primary-300: hsl(360 71% 66%);
+  --color-primary-400: hsl(0 64% 55%);
+  --color-primary-500: hsl(360 67% 44%);
+  --color-primary-600: hsl(360 72% 38%);
+  --color-primary-700: hsl(360 79% 32%);
+  --color-primary-800: hsl(360 85% 25%);
+  --color-primary-900: hsl(360 92% 20%);
+  --color-firebird-theme: var(--color-primary-400);
 
   --color-secondary-50: hsl(38 65% 95%);
   --color-secondary-100: hsl(38 85% 92%);
@@ -38,19 +39,15 @@
   --color-secondary-900: hsl(38 52% 12%);
   --color-secondary-950: hsl(38 42% 7%);
 
-  --color-secondary-pastel: hsl(40 100% 75%);
-
-  --color-accent-red-50: hsl(360 100% 97%);
-  --color-accent-red-100: hsl(360 82% 89%);
-  --color-accent-red-200: hsl(360 77% 78%);
-  --color-accent-red-300: hsl(360 71% 66%);
-  --color-accent-red-400: hsl(0 64% 55%);
-  --color-accent-red-500: hsl(360 67% 44%);
-  --color-accent-red-600: hsl(360 72% 38%);
-  --color-accent-red-700: hsl(360 79% 32%);
-  --color-accent-red-800: hsl(360 85% 25%);
-  --color-accent-red-900: hsl(360 92% 20%);
-  --color-firebird-theme: var(--color-accent-red-400);
+  --color-accent-azure-100: hsl(211 100% 90%);
+  --color-accent-azure-200: hsl(210 100% 80%);
+  --color-accent-azure-300: hsl(211 100% 90%);
+  --color-accent-azure-400: hsl(210 100% 60%);
+  --color-accent-azure-500: hsl(210 100% 50%);
+  --color-accent-azure-600: hsl(210 100% 40%);
+  --color-accent-azure-700: hsl(210 100% 30%);
+  --color-accent-azure-800: hsl(210 100% 20%);
+  --color-accent-azure-900: hsl(211 100% 10%);
 
   /* Spacing */
   --spacing-1: 0.25rem;
