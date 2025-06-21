@@ -1,0 +1,25 @@
+{
+  "name": "Smitesh Kharat - Portfolio",
+  "short_name": "Portfolio",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-mask.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "hsl(0 64% 55%)",
+  "background_color": "hsl(223, 48%, 11%)",
+  "display": "standalone"
+}
