@@ -8,7 +8,7 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import NavbarItem from "./NavbarItem";
 
 const NAVBAR_ITEMS = [
-  { to: "/", title: "Home", icon: <FaLaptop /> },
+  { hash: "home", to: "/", title: "Home", icon: <FaLaptop /> },
   { hash: "projects", title: "Projects", icon: <FaCode /> },
   { hash: "about", title: "About", icon: <UserRound size={15} /> },
   { hash: "contact", title: "Contact", icon: <Mail size={15} /> },
@@ -17,7 +17,7 @@ const NAVBAR_ITEMS = [
 export default function Header() {
   const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
 
-  const elementIdArray = NAVBAR_ITEMS.map((item) => item.hash ?? "home");
+  const elementIdArray = NAVBAR_ITEMS.map((item) => item.hash);
   const activeItem = useIntersectionObserver({
     elementIdArray,
     defaultId: "home",
