@@ -17,6 +17,12 @@ function ParticleText({ children }: PropsWithChildren) {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [isMobile, _] = React.useState(getIsMobileInitialState);
 
+  // Get the topmost section of the app
+  const heroSectionRef = React.useRef<HTMLElement>(null);
+  React.useEffect(() => {
+    heroSectionRef.current = document.getElementById("home");
+  }, []);
+
   function animate(ctx: CanvasRenderingContext2D) {
     if (!effect.current) return;
     const currentEffect = effect.current;
@@ -42,17 +48,19 @@ function ParticleText({ children }: PropsWithChildren) {
       canvas.height = window.innerHeight;
 
       const res = getContextAndParentElement(canvas);
-      if (!res) return;
+      const heroSection = heroSectionRef.current?.getBoundingClientRect();
+
+      if (!res || !heroSection) return;
       const { ctx, parentElement } = res;
 
-      // This means the area to draw in is not yet visible. "top"
-      // represents distance of element from the top of the viewport,
-      // since its negative this means the user has scrolled down.
-      // Attempting to render now will fail and the text will disappear
-      // so exit and stop the re-render.
-      if (parentElement.top < 0) {
-        return;
-      }
+      // Parent element's y will be negative if user has scrolled down.
+      // So, get the negative distance to the very top of the page and
+      // subtract the negative y distance of the parent to get the actual
+      // distance from top of viewport to top of container (based on
+      // origin x=0,y=0 being at top left edge of the app).
+      const distanceToTopEdge = heroSection.top;
+      const distanceToContainerTop = parentElement.top;
+      parentElement.y = -(distanceToTopEdge - distanceToContainerTop);
 
       const textX = parentElement.x + parentElement.width / 2;
       const textY = parentElement.y + parentElement.height / 2;
@@ -77,7 +85,7 @@ function ParticleText({ children }: PropsWithChildren) {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         redrawCanvas();
-      }, 200);
+      }, 300);
     }
 
     function handleMouseMove(e: MouseEvent) {

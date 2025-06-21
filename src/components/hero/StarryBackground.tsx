@@ -54,7 +54,7 @@ function StarryBackground() {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         redrawCanvas();
-      }, 200);
+      }, 300);
     }
 
     redrawCanvas();
