@@ -28,12 +28,12 @@ function AboutMe() {
             <AboutSubheaderWrapper color="red">My Story</AboutSubheaderWrapper>
 
             <p className="mt-2 mb-4">
-              Hi there! With about 10 years of experience in firmware
-              development in C++, I decided to make a career transition to a
-              more user-centric role in frontend web development. I set myself
-              on the path to mastering various technologies used to design
-              modern web apps with a strong focus on building responsive,
-              beautiful, and engaging experiences.
+              Hi there! With 9+ years of experience in software development in
+              C++, I decided to make a career transition to a more user-centric
+              role in frontend web development. I set myself on the path to
+              mastering various technologies used to design modern web apps with
+              a strong focus on building responsive, beautiful, and engaging
+              experiences.
             </p>
             <p>
               Its a real joy to transform ideas into interactive experiences and
