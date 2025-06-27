@@ -111,7 +111,15 @@ function ParticleText({ children }: PropsWithChildren) {
 
     redrawCanvas();
 
-    window.addEventListener("resize", handleWindowResize);
+    // On Chrome, window resize is triggered twice when site is loaded by
+    // typing in the address field. This is because the keyboard is visible
+    // initially, which disappears after clicking enter; this is seen as a
+    // window height resize. Add a short timer to delay adding the resize
+    // event listener.
+    setTimeout(
+      () => window.addEventListener("resize", handleWindowResize),
+      300,
+    );
 
     if (!isMobile) {
       window.addEventListener("mousemove", handleMouseMove);
