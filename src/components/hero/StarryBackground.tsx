@@ -46,6 +46,8 @@ function StarryBackground() {
       );
 
       starryBg.current.createStars(100, 50, 20);
+
+      cancelAnimationFrame(requestIdRef.current);
       requestIdRef.current = requestAnimationFrame(() => animate(ctx));
     }
 
