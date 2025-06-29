@@ -33,10 +33,13 @@ function Hero() {
               <img
                 src={profileJpg}
                 alt="My profile picture"
+                onContextMenu={(e) => e.preventDefault()}
                 className="shadow-elevation-medium h-full w-full rounded-full object-cover
-                  transition-transform duration-300
+                  transition-transform duration-300 select-none
                   hover:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
-                  hover:duration-200 motion-safe:hover:scale-90"
+                  hover:duration-200
+                  active:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
+                  active:duration-200 motion-safe:hover:scale-90 motion-safe:active:scale-90"
               />
             </picture>
           </div>
