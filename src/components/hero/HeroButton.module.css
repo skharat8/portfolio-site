@@ -28,3 +28,13 @@
     filter: blur(20px);
   }
 }
+
+.btn:active::before {
+  background-image: radial-gradient(
+    circle at center,
+    var(--color-indigo-800),
+    30%,
+    transparent
+  );
+  filter: blur(20px);
+}

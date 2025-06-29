@@ -81,7 +81,8 @@ function HeroButton({
       >
         <PlanetIcon
           className="h-5 w-5 fill-current text-slate-400 transition-colors duration-500
-            group-hover:text-slate-50 group-focus-visible:text-slate-50"
+            group-hover:text-slate-50 group-focus-visible:text-slate-50
+            group-active:text-slate-50"
         />
 
         {children}
@@ -91,7 +92,9 @@ function HeroButton({
         className="z-2 h-5 w-5 fill-current text-slate-400 opacity-0 transition-[transform_opacity]
           duration-300 peer-hover:translate-y-[40%] peer-hover:text-indigo-200
           peer-hover:opacity-100 peer-focus-visible:translate-y-[40%]
-          peer-focus-visible:text-indigo-200 peer-focus-visible:opacity-100"
+          peer-focus-visible:text-indigo-200 peer-focus-visible:opacity-100
+          peer-active:translate-y-[40%] peer-active:text-indigo-200
+          peer-active:opacity-100"
       />
     </div>
   );
