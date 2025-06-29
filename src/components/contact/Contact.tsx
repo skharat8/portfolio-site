@@ -8,7 +8,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="mb-4 min-h-[85svh] scroll-mt-7 bg-slate-950 font-[Noto_Sans_Variable]"
+      className="mb-4 min-h-[87svh] scroll-mt-7 bg-slate-950 font-[Noto_Sans_Variable]"
     >
       <MaxWidthWrapper maxWidth="1200px">
         <SectionTitle
