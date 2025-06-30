@@ -1,5 +1,5 @@
 <h1 align="center">Portfolio Site</h1>
-<p align="center">:link: <a href="#"><strong>Live Preview</strong></a></p>
+<p align="center">:link: <a href="https://www.smiteshkharat.com"><strong>Live Preview</strong></a></p>
 
 ## Built With
 
