@@ -5,15 +5,11 @@ import { type HTMLMotionProps, type Variants, motion } from "motion/react";
 
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { cn } from "@/lib/utils";
+import { getIsMobileInitialState } from "@/utils/common.utils";
 
 import DownIcon from "./DownIcon";
 import styles from "./HeroButton.module.css";
 import PlanetIcon from "./PlanetIcon";
-
-function getIsMobileInitialState() {
-  const QUERY = "(hover: hover) and (pointer: fine)";
-  return !window.matchMedia(QUERY).matches;
-}
 
 type HeroButtonProps = HTMLMotionProps<"button"> & {
   className?: string;

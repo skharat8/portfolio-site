@@ -1,9 +1,10 @@
-import type React from "react";
+import React from "react";
 import type { PropsWithChildren } from "react";
 
 import { motion } from "motion/react";
 
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import { getIsMobileInitialState } from "@/utils/common.utils";
 
 type TechStackItemProps = {
   icon: React.ComponentType<{ className: string }>;
@@ -13,13 +14,15 @@ function TechStackItem({
   icon: Icon,
   children,
 }: PropsWithChildren<TechStackItemProps>) {
+  const [isMobile, _] = React.useState(getIsMobileInitialState);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const hoverEffect = isMobile ? "" : "hover:bg-primary-400";
 
   return (
     <motion.article
-      className="group flex-center-col bg-secondary-900 border-secondary-950 hover:bg-primary-400
+      className={`group flex-center-col bg-secondary-900 border-secondary-950 ${hoverEffect}
         h-[6rem] min-w-[6rem] gap-3 rounded-md border-3 p-3 will-change-transform
-        sm:gap-2"
+        sm:gap-2`}
       whileHover={{
         scale: prefersReducedMotion ? 1 : 1.05,
         boxShadow: "var(--shadow-elevation-medium)",
@@ -32,8 +35,8 @@ function TechStackItem({
     >
       <Icon className="group-hover:fill-neutral-200" />
       <span
-        className="-skew-x-4 text-xs font-bold text-nowrap text-neutral-50 uppercase select-none
-          group-hover:text-neutral-100"
+        className={`-skew-x-4 text-xs font-bold text-nowrap text-neutral-50 uppercase select-none
+          ${isMobile ? "" : "group-hover:text-neutral-100"}`}
       >
         {children}
       </span>

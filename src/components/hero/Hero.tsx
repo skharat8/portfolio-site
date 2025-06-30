@@ -4,16 +4,13 @@ import React from "react";
 import profileJpg from "@images/profile.jpg";
 import profileWebp from "@images/profile.webp";
 
+import { getIsMobileInitialState } from "@/utils/common.utils";
+
 import LiquidUnderline from "../LiquidUnderline";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import HeroButton from "./HeroButton";
 import HeroTitle from "./HeroTitle";
 import StarryBackground from "./StarryBackground";
-
-function getIsMobileInitialState() {
-  const QUERY = "(hover: hover) and (pointer: fine)";
-  return !window.matchMedia(QUERY).matches;
-}
 
 function Hero() {
   const navigate = useNavigate();

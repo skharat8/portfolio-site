@@ -3,11 +3,7 @@ import React from "react";
 
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 import { Effect, getContextAndParentElement } from "@/utils/canvas.utils";
-
-function getIsMobileInitialState() {
-  const QUERY = "(hover: hover) and (pointer: fine)";
-  return !window.matchMedia(QUERY).matches;
-}
+import { getIsMobileInitialState } from "@/utils/common.utils";
 
 function ParticleText({ children }: PropsWithChildren) {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);

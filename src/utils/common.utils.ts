@@ -15,3 +15,8 @@ export function range(start: number, end?: number, step = 1) {
 export function random(start: number, end: number) {
   return Math.floor(Math.random() * (end - start)) + start;
 }
+
+export function getIsMobileInitialState() {
+  const QUERY = "(hover: hover) and (pointer: fine)";
+  return !window.matchMedia(QUERY).matches;
+}
