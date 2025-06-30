@@ -47,8 +47,7 @@ function HeroButton({
       background: `radial-gradient(70% 90% at 50% 100%,
                              var(--color-indigo-600),
                              60%,
-                             var(--color-indigo-900)),
-                       var(--color-indigo-300) border-box`,
+                             var(--color-indigo-900))`,
     },
   };
 
@@ -78,8 +77,7 @@ function HeroButton({
           background: `radial-gradient(70% 90% at 50% 100%,
                              var(--color-indigo-600),
                              60%,
-                             var(--color-indigo-900)),
-                       var(--color-indigo-100) border-box`,
+                             var(--color-indigo-900))`,
           transition: { type: "tween", ease: "easeIn", duration: 10 },
         }}
         transition={{ type: "spring", damping: 7 }}
