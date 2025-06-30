@@ -15,7 +15,3 @@
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)
 ![PNPM](https://img.shields.io/badge/PNPM-%23F69220.svg?style=for-the-badge&logo=pnpm&logoColor=white)
-
-## Acknowledgements
-
-- Sunglasses by Zach Bogart from <a href="https://thenounproject.com/browse/icons/term/sunglasses/" target="_blank" title="Sunglasses Icons">Noun Project</a> (CC BY 3.0)

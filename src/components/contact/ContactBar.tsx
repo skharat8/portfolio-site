@@ -22,7 +22,7 @@ function ContactBar() {
       </div>
 
       <div className={itemStyles}>
-        <a href="https://github.com/skharat8" target="_blank">
+        <a href="https://github.com/skharat8/firebird" target="_blank">
           <ContactBarIcon icon={GithubIcon} />
         </a>
       </div>
