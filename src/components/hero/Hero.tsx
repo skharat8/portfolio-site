@@ -1,4 +1,5 @@
 import { useNavigate } from "@tanstack/react-router";
+import React from "react";
 
 import profileJpg from "@images/profile.jpg";
 import profileWebp from "@images/profile.webp";
@@ -9,8 +10,18 @@ import HeroButton from "./HeroButton";
 import HeroTitle from "./HeroTitle";
 import StarryBackground from "./StarryBackground";
 
+function getIsMobileInitialState() {
+  const QUERY = "(hover: hover) and (pointer: fine)";
+  return !window.matchMedia(QUERY).matches;
+}
+
 function Hero() {
   const navigate = useNavigate();
+  const [isMobile, _] = React.useState(getIsMobileInitialState);
+  const hoverEffectForProfilePic = isMobile
+    ? ""
+    : `hover:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
+       hover:duration-200 motion-safe:hover:scale-90`;
 
   return (
     <section
@@ -22,7 +33,7 @@ function Hero() {
 
       <MaxWidthWrapper maxWidth="1200px" className="flex flex-col items-center">
         <div
-          className="flex-center-col mt-8 w-full gap-6 md:gap-8 lg:mt-10 lg:flex-row-reverse
+          className="flex-center-col mt-8 w-full gap-6 md:gap-7 lg:mt-10 lg:flex-row-reverse
             lg:justify-around lg:gap-11 xl:gap-12 2xl:gap-12"
         >
           <HeroTitle />
@@ -34,12 +45,10 @@ function Hero() {
                 src={profileJpg}
                 alt="My profile picture"
                 onContextMenu={(e) => e.preventDefault()}
-                className="shadow-elevation-medium h-full w-full rounded-full object-cover
-                  transition-transform duration-300 select-none
-                  hover:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
-                  hover:duration-200
+                className={`shadow-elevation-medium h-full w-full rounded-full object-cover
+                  transition-transform duration-300 select-none ${hoverEffectForProfilePic}
                   active:shadow-[0_0_10px_10px_hsl(from_var(--color-slate-500)_h_s_l_/0.4)]
-                  active:duration-200 motion-safe:hover:scale-90 motion-safe:active:scale-90"
+                  active:duration-200 motion-safe:active:scale-90`}
               />
             </picture>
           </div>
@@ -48,7 +57,7 @@ function Hero() {
 
       <MaxWidthWrapper
         maxWidth="650px"
-        className="flex flex-col items-center gap-6 md:mt-8 md:gap-7"
+        className="flex flex-col items-center gap-6 md:gap-7 lg:mt-8"
       >
         <p className="z-2 text-lg text-slate-200 text-shadow-lg text-shadow-slate-950 md:text-xl">
           I'm a React developer with full-stack expertise. I enjoy crafting

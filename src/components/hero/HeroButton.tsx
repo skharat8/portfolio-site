@@ -26,6 +26,10 @@ function HeroButton({
 }: PropsWithChildren<HeroButtonProps>) {
   const [isMobile, _] = React.useState(getIsMobileInitialState);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const hoverEffectForDownArrow = isMobile
+    ? ""
+    : `peer-hover:translate-y-[40%] peer-hover:text-indigo-200
+       peer-hover:opacity-100`;
 
   const variants: Variants = {
     initial: {
@@ -44,7 +48,7 @@ function HeroButton({
                              var(--color-indigo-600),
                              60%,
                              var(--color-indigo-900)),
-                       var(--color-indigo-100) border-box`,
+                       var(--color-indigo-300) border-box`,
     },
   };
 
@@ -76,25 +80,23 @@ function HeroButton({
                              60%,
                              var(--color-indigo-900)),
                        var(--color-indigo-100) border-box`,
+          transition: { type: "tween", ease: "easeIn", duration: 10 },
         }}
         transition={{ type: "spring", damping: 7 }}
       >
         <PlanetIcon
-          className="h-5 w-5 fill-current text-slate-400 transition-colors duration-500
-            group-hover:text-slate-50 group-focus-visible:text-slate-50
-            group-active:text-slate-50"
+          className={`h-5 w-5 fill-current text-slate-400 transition-colors duration-500
+            ${isMobile ? "" : "group-hover:text-slate-50"} group-focus-visible:text-slate-50
+            group-active:text-slate-50`}
         />
 
         {children}
       </motion.button>
 
       <DownIcon
-        className="z-2 h-5 w-5 fill-current text-slate-400 opacity-0 transition-[transform_opacity]
-          duration-300 peer-hover:translate-y-[40%] peer-hover:text-indigo-200
-          peer-hover:opacity-100 peer-focus-visible:translate-y-[40%]
-          peer-focus-visible:text-indigo-200 peer-focus-visible:opacity-100
-          peer-active:translate-y-[40%] peer-active:text-indigo-200
-          peer-active:opacity-100"
+        className={`z-2 h-5 w-5 fill-current text-slate-400 opacity-0 transition-[transform_opacity]
+          duration-300 peer-focus-visible:translate-y-[40%] ${hoverEffectForDownArrow}
+          peer-focus-visible:text-indigo-200 peer-focus-visible:opacity-100`}
       />
     </div>
   );
