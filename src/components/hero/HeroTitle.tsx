@@ -15,7 +15,7 @@ function HeroTitle() {
       <h1 className="flex flex-col">
         <ParticleText>Smitesh Kharat</ParticleText>
         <span className="pt-8 text-xl md:pt-9 md:text-3xl xl:pt-[7rem]">
-          Frontend React Developer
+          React Frontend Developer
         </span>
       </h1>
 
