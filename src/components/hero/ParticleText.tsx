@@ -60,14 +60,9 @@ function ParticleText({ children }: PropsWithChildren) {
 
       // Parent container dimensions are changing on resize.
       // Fix bug where the t becomes an l on resize.
-      parentElement.y = effect.current
-        ? canvas.width < 650
-          ? parentElement.y - 8
-          : parentElement.y - 4
-        : parentElement.y;
-      parentElement.width = effect.current
-        ? parentElement.width + 4.22
-        : parentElement.width;
+      parentElement.y =
+        canvas.width < 600 ? parentElement.y - 8 : parentElement.y - 4;
+      parentElement.width += 4.22;
 
       const textX = parentElement.x + parentElement.width / 2;
       const textY = parentElement.y + parentElement.height / 2;
@@ -105,7 +100,8 @@ function ParticleText({ children }: PropsWithChildren) {
       requestIdRef.current = requestAnimationFrame(() => animate);
     }
 
-    redrawCanvas();
+    // Wait for custom font to load before the initial draw
+    setTimeout(() => redrawCanvas(), 300);
 
     // On Chrome, window resize is triggered twice when site is loaded by
     // typing in the address field. This is because the keyboard is visible
