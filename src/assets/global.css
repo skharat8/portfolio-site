@@ -1,9 +1,8 @@
 @import "tailwindcss";
+@import "tailwind-animations";
 @import "./theme.css";
 @import "@fontsource-variable/playfair-display";
 @import "@fontsource-variable/noto-sans";
-
-@plugin "@midudev/tailwind-animations";
 
 @utility centered-container {
   min-height: 100%;

@@ -1,4 +1,6 @@
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - esbuild
-  - unrs-resolver
+allowBuilds:
+  "@tailwindcss/oxide": true
+  esbuild: true
+  unrs-resolver: true
+minimumReleaseAge: 10080 # 7 days in minutes
+trustPolicy: no-downgrade

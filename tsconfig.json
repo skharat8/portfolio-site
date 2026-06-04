@@ -26,7 +26,6 @@
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@images/*": ["./src/assets/images/*"]

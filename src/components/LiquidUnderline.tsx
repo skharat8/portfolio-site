@@ -16,7 +16,7 @@ function LiquidUnderline({ children }: PropsWithChildren) {
       >
         <Wave
           width="350"
-          className="group-hover:-translate-y-[5.3rem] group-focus:-translate-y-[5.3rem]"
+          className="group-hover:translate-y-[-5.3rem] group-focus:translate-y-[-5.3rem]"
         />
       </span>
     </span>

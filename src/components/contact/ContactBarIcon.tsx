@@ -29,7 +29,7 @@ function ContactBarIcon({ icon: Icon }: ContactBarIconProps) {
       }}
     >
       <Icon
-        className="hover:bg-primary-50 focus:bg-primary-50 -mt-1 h-[3rem] w-full scale-110
+        className="hover:bg-primary-50 focus:bg-primary-50 -mt-1 h-7 w-full scale-110
           bg-slate-300 fill-current shadow-sm"
       />
     </motion.div>
